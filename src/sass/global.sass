@@ -1,0 +1,188 @@
+body
+   font-family: "Inter", system-ui
+   background: #ffff
+   font-weight: 400
+   font-size: 16px
+   line-height: 100%
+   color: rgb(32, 32, 32)
+a
+   text-decoration: none
+   box-sizing: border-box
+   transition: 0.5s !important
+   &:hover 
+      color: $blue
+.yel 
+   color: $blue
+.container
+   padding: 0 15px
+   max-width: 1628px
+   margin: 0 auto
+   @media ( max-width: 1199px )
+      max-width: 960px
+   @media (max-width: 991px)
+      max-width: 720px
+   @media (max-width: 767px)
+      max-width: 540px
+.d-flex, .q
+   display: flex
+.body-wrap
+   overflow: hidden
+   position: relative
+   display: flex
+   flex-direction: column
+   min-height: 100vh
+footer
+   margin-top: auto
+h1
+   font-size: 113.49px
+   font-weight: 700
+   line-height: 137px
+   letter-spacing: 0.15rem
+   margin: 0
+   &::first-letter
+      color: $blue
+h2 
+   margin: 0
+   font-size: 68px
+   font-weight: 700
+   letter-spacing: 0.06rem
+   line-height: 82px
+   text-transform: uppercase
+   position: relative
+   width: max-content
+   &::first-letter
+      color: $blue
+   &:before 
+      content: ""
+      display: block
+      position: absolute
+      left: -162px
+      top: 50%
+      margin-top: -2.5px
+      width: 81px
+      height: 5px
+      background: $blue
+ul 
+   margin: 0
+   padding: 0
+   list-style-type: none
+p
+   margin: 0
+.svg, rect, line, circle
+   transition: 0.5s ease
+a
+   transition: color 0.5s ease
+   box-sizing: border-box
+li
+   a
+      transition: color 0.5s ease
+button
+   cursor: pointer
+   box-sizing: border-box
+textarea
+   transition: border 0.5s
+   box-sizing: border-box
+   &:focus
+      transition: border 0.5s
+      outline: none
+      border: 1px solid $blue
+input
+   transition: 0.5s
+   box-sizing: border-box
+   border: 1px solid #fff
+   &:disabled
+      pointer-events: none
+      opacity: 0.5
+   &:focus 
+      border: 1px solid $blue 
+      transition: 0.5s
+   &:focus-visible
+      outline: initial
+path
+   transition: fill 0.5s, stroke 0.5s
+div 
+   box-sizing: border-box
+.icon 
+   transition: fill 0.5s, stroke 0.5s
+html * 
+   scrollbar-width: thin
+   scrollbar-color: blue $blue
+.popup__bg
+   scrollbar-width: thin
+   scrollbar-color: transparent transparent
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar 
+   height: 7px
+   width: 7px
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: $blue
+   border-radius: 6px
+.btn 
+   display: flex
+   align-items: center
+   justify-content: space-between
+   transition: 0.5s
+   box-sizing: border-box
+   padding: 0 7px 0 25px
+   width: 376px
+   height: 91px
+   border: 1px solid rgb(43, 58, 140)
+   border-radius: 114px
+   background: rgb(43, 58, 140)
+   position: relative
+   p 
+      color: rgb(255, 255, 255)
+      font-size: 20px
+      font-weight: 700
+      line-height: 24px
+      text-transform: uppercase
+      transition: 0.5s
+      position: relative   
+      z-index: 2
+   div 
+      width: 77px
+      height: 77px
+      box-sizing: border-box
+      border: 1px solid rgb(43, 58, 140)
+      background: rgb(255, 255, 255)
+      border-radius: 50%
+      transition: 0.5s
+      display: flex
+      align-items: center 
+      justify-content: center
+      position: relative   
+      right: 0
+      z-index: 2
+   &:after 
+      width: 406px
+      height: 121px
+      border-radius: 114px
+      background: rgba(43, 58, 140, 0.2)
+      position: absolute
+      top: -16px
+      left: -17px
+      z-index: 0
+      content: ""
+      display: block
+   &:hover 
+      p 
+         color: $blue
+      div
+         right: 50%
+         margin-right: -38.5px
+   &_2
+      background: rgb(255, 255, 255)
+      p
+         color: $blue
+      &:after 
+         display: none
+      div
+         background: $blue
+      &:hover 
+         p 
+            color: white
