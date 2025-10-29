@@ -30,16 +30,29 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
 		rel="stylesheet">
-
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
 <body>
 	<div class="body-wrap">
+		<div class="scroll-nav">
+			<div>
+				<div class="scroll-nav__current">1</div>
+				<div class="scroll-nav__next">
+					<span>2</span>
+					<span>3</span>
+				</div>
+			</div>
+			<img src="img/prog.svg" alt="" class="get1">
+			<img src="img/pag2.svg" alt="" class="get2">
+			<img src="img/pag3.svg" alt="" class="get3">
+		</div>
 		<header class="header" id="header">
+			<img src="img/main1.png" alt="" class="header__bg">
 			<nav class="nav">
 				<div class="container">
 					<div class="nav__box q">
@@ -48,7 +61,7 @@
 						</a>
 						<ul>
 							<li>
-								<a href="#item" class="go_to">
+								<a href="#tar" class="go_to">
 									Продукты
 								</a>
 							</li>
@@ -58,12 +71,12 @@
 								</a>
 							</li>
 							<li>
-								<a href="#par" class="go_to">
+								<a href="#partners" class="go_to">
 									Партнеры
 								</a>
 							</li>
 							<li>
-								<a href="#van" class="go_to">
+								<a href="#per" class="go_to">
 									Преимущества
 								</a>
 							</li>
@@ -75,7 +88,10 @@
 						</ul>
 						<div class="nav__info q">
 							<a href="https://wa.me/79263461220" class="nav__whatsapp">
-								<img src="img/tel.svg" alt="">
+								<img src="img/tel2.svg" alt=""  class="svg">
+							</a>
+							<a href="https://wa.me/79263461220" class="nav__whatsapp">
+								<img src="img/tel.svg" alt=""  class="svg">
 							</a>
 							<a href="tel:+78002227552" class="nav__tel">
 								+7 800 222 75 52
@@ -92,22 +108,17 @@
 			<div class="menu">
 				<ul>
 					<li>
-						<a href="#item" class="go_to">
+						<a href="#tar" class="go_to">
 							Продукты
 						</a>
 					</li>
 					<li>
-						<a href="#about" class="go_to">
-							О компании
-						</a>
-					</li>
-					<li>
-						<a href="#par" class="go_to">
+						<a href="#partners" class="go_to">
 							Партнеры
 						</a>
 					</li>
 					<li>
-						<a href="#van" class="go_to">
+						<a href="#per" class="go_to">
 							Преимущества
 						</a>
 					</li>
@@ -117,624 +128,1158 @@
 						</a>
 					</li>
 				</ul>
-				<div class="nav__info">
-					<a href="https://wa.me/79263461220" class="nav__whatsapp">
-						<img src="img/tel.svg" alt="">
+				<div class="nav__menu ">
+					<a href="mailto:request@asi-log.com" class="nav__mail">
+						request@asi-log.com
 					</a>
 					<a href="tel:+78002227552" class="nav__tel">
 						+7 800 222 75 52
 					</a>
+					<p class="menu__text">
+						Химки, Московская область, <br> Шереметьевское шоссе, вл. 6К, <br> офис 229
+					</p>
+					<div class="nav__info q">
+						<a href="https://wa.me/79263461220" class="nav__whatsapp">
+							<img src="img/tel2.svg" alt=""  class="svg">
+						</a>
+						<a href="https://wa.me/79263461220" class="nav__whatsapp">
+							<img src="img/tel.svg" alt=""  class="svg">
+						</a>
+					</div>
 					<a href="#" class="nav__call">
 						+ Запрос на перевозку
 					</a>
 				</div>
 			</div>
 			<div class="container cont">
-				<img src="img/air.png" alt="" class="header__pic2">
+				<picture>
+					<source srcset="img/air-mob.png" media="(max-width: 576px)">
+					<img src="img/air.png" alt="" class="header__pic2">
+				</picture>
 				<div class="header__wrap">
-					<div class="header__title">
-						<h1>
-							АЗИЯЛИНК
-						</h1>
-						<img src="img/a1.svg" alt="">
-						<h1>
-							ЛОГИСТИКС
-						</h1>
-					</div>
-					<p class="header__text">
-						АЗИЯЛИНК ЛОГИСТИКС специализируется на авиаперевозке грузов между Россией и Китаем.
-						Мы предлагаем эффективные и надёжные логистические решение, обеспечивая быструю доставку и полный
-						спектр услуг по управлению цепочками поставок
-					</p>
-					<a href="#" class="header__btn btn">
+					<h1>
+						Авиадоставка
+					</h1>
+					<div class="header__bottom">
 						<p>
-							Запрос на перевозку
+							Международные грузовые авиаперевозки из <br> всех городов РФ — быстро, легально, под ключ
 						</p>
-						<div>
-							<img src="img/btn.svg" alt="">
+						<div class="header__row q">
+							<span>
+								Авиаперевозки коммерческих грузов из Москвы, Санкт-Петербурга, Казани и других городов России  <br>
+								в Китай, Азию, Турцию и ОАЭ.
+							</span>
+							<span>
+								Официальный агент ПАО «Аэрофлот» и China Eastern Airlines. Экспресс-квоты, выкуп мест, ежедневные вылеты, контроль сроков.
+							</span>
+							<span>
+								Генеральные, опасные (DGR), ценные грузы, <br> продукты, БАДы, сырьё, химия, оборудование.
+							</span>
 						</div>
-					</a>
-					<img src="img/bg.svg" alt="" class="header__bg">
-					<img src="img/a3.svg" alt="" class="header__pic1">
+					</div>
 				</div>
 			</div>
 		</header>
-		<section class="info" id="info">
+		<section class="tar" id="tar">
+			<img src="img/main7.png" alt="" class="header__bg">
 			<div class="container">
-				<div class="info__flex marquee d-flex">
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ
+				<div class="tar__row q">
+					<div class="tar__item">
+						<img src="img/tar1.png" alt="" class="tar__pic">
+						<img src="img/tar1.svg" alt="" class="tar__icon">
+						<p>
+							Документы — <br> под ключ
+						</p>
+					</div>
+					<div class="tar__item">
+						<img src="img/tar2.png" alt="" class="tar__pic">
+						<img src="img/tar2.svg" alt="" class="tar__icon">
+						<p>
+							Сопровождение <br> 24/7
+						</p>
+					</div>
+					<div class="tar__item">
+						<img src="img/tar3.png" alt="" class="tar__pic">
+						<img src="img/tar3.svg" alt="" class="tar__icon">
+						<p>
+							Индивидуальный <br> подход 
+						</p>
+					</div>
+				</div>
+				<div class="call__wrap">
+					<p class="tar__name">
+						Быстрый запрос тарифа
 					</p>
-					<p>
-						МОСКВА <span> - </span>ПЕКИН
-					</p>
-					<p>
-						МОСКВА <span> - </span>СИАНЬ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШЭНЬЯН
-					</p>
-					<p>
-						КАЗАНЬ <span> - </span>ШАНХАЙ
-					</p>
-					<p>
-						С-Петербург <span> - </span>ШАНХАЙ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ <span> - </span>ВЕСЬ КИТАЙ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ <span> - </span>ВЕСЬ МИР
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ПЕКИН
-					</p>
-					<p>
-						МОСКВА <span> - </span>СИАНЬ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШЭНЬЯН
-					</p>
-					<p>
-						КАЗАНЬ <span> - </span>ШАНХАЙ
-					</p>
-					<p>
-						С-Петербург <span> - </span>ШАНХАЙ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ <span> - </span>ВЕСЬ КИТАЙ
-					</p>
-					<p>
-						МОСКВА <span> - </span>ШАНХАЙ <span> - </span>ВЕСЬ МИР
-					</p>
+					<form action="success.php" class="form js-form" id="popupResult" method="post">
+						<div class="form__flex q">
+							<div class="form__item form__item_1">
+								<select class="select">
+									<option value="1">Москва (SVO/DME..)Москва (SVO/DME..)</option>
+									<option value="2">Москва</option>
+									<option value="3">Москва</option>
+								</select>
+								<label>
+									Откуда
+								</label>
+							</div>
+							<div class="form__item form__item_2">
+								<select class="select">
+									<option value="1">Шанхай/Дубай/Сеул</option>
+									<option value="2">Москва</option>
+									<option value="3">Москва</option>
+								</select>
+								<label>
+									Откуда
+								</label>
+							</div>
+							<div class="form__item form__item_3">
+								<input type="number" placeholder="14 257" name="name" class="form__field" required="">
+								<label>
+									Вес (кг)
+								</label>
+							</div>
+							<div class="form__item form__item_4">
+								<select class="select">
+									<option value="1">Генеральный</option>
+									<option value="2">Генеральный1</option>
+									<option value="3">Генеральный2</option>
+								</select>
+								<label>
+									Тип груза
+								</label>
+							</div>
+							<div class="form__item form__item_5">
+								<input type="text" placeholder="Телефон или E-mail " name="tel" class="form__field" required="">
+								<label>
+									Контакты
+								</label>
+							</div>
+						</div>
+						<div class="calc__item ">
+							<input class="form-check-input form__field custom-checkbox" type="checkbox" name="form2" id="form2"
+								value="Yes">
+							<label class="form-check-label " for="form2">
+								<p>
+									Я ознакомлен(а) с <a href="#" target="_blank">  Политикой конфиденциальности</a> и даю свое Согласие на <a href="#" target="_blank"> обработку персональных данных</a>
+								</p>
+							</label>
+						</div>
+						<button class="btn" data-submit>
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="info" id="info">
+				<div class="container">
+					<div class="info__wrap"></div>
+				</div>
+				<div class="info__bottom">
+					<div class="container">
+						<div class="info__flex q">
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										Направления
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info1.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										Типы грузов
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info2.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										О компании
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info3.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										Партнеры
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info4.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										Как работаем
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info5.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+							<a href="#" class="info__item">
+								<div class="info__top q">
+									<p>
+										Кейсы
+									</p>
+									<img src="img/i.svg" alt="">
+								</div>
+								<img src="img/info6.png" alt="" class="info__pic">
+								<img src="img/i2.svg" alt="" class="info__icon">
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="item" id="item">
 			<div class="container">
-				<div class="item__wrap">
-					<img src="img/item2.svg" alt="" class="item__fig2">
-
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<span>
+						Доставка из всех городов РФ
+					</span>
 					<h2>
-						МЫ ПРЕДЛАГАЕМ
+						Направления авиаперевозок
 					</h2>
-					<img src="img/item.svg" alt="" class="item__fig1">
-					<div class="item__box q">
-						<div class="item__block">
-							<p class="item__title">
-								АВИАПЕРЕВОЗКИ
+				</div>
+				<p class="item__sub">
+					Экспорт/импорт, таможенное оформление, консолидация, сертификация, доставка до двери, складские услуги
+				</p>
+				<div class="item__wrap">
+					<div class="item__el">
+						<img src="img/item1.png" alt="" class="item__bg">
+						<h3>
+							Китай
+						</h3>
+						<a href="#" class="btn">
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</a>
+						<div class="item__content q">
+							<p>
+								<span>
+									Ключевой агент China Eastern Airlines  <br>
+									(Москва, Пулково, Казань) Агент Aeroflot Russian Airlines (Москва)
+								</span>
 							</p>
-							<p class="item__num">
-								1
+							<p>
+								<span> География:</span> Пекин, Шанхай, Гуанчжоу, Шэньчжэнь, Чэнду, Чунцин, Сиань, Ханчжоу, Нинбо, Циндао, Харбин, Хайнань, Санья и др.
 							</p>
-							<p class="item__name">
-								РОССИЯ - КИТАЙ
-							</p>
-							<p class="item__info">
-								Генеральный агент MU <br>
-								в Москве, Пулково и Казани
-							</p>
-							<p class="item__text">
-								Лучшие цены на авиаэкспорт
-							</p>
-						</div>
-						<div class="item__block">
-							<p class="item__title">
-								АВИАПЕРЕВОЗКИ
-							</p>
-							<p class="item__num">
-								2
-							</p>
-							<p class="item__name">
-								КИТАЙ - РОССИЯ
-							</p>
-							<p class="item__info">
-								Прямые агентские соглашения <br>
-								с авиалиниями MU / HU / JD / GS
-							</p>
-							<p class="item__text">
-								Выкупленной емкости > 500 тонн до <br> Шереметьево и Пулково / ежемесячно
-							</p>
-						</div>
-						<div class="item__block">
-							<p class="item__title">
-								АВИАПЕРЕВОЗКИ
-							</p>
-							<p class="item__num">
-								3
-							</p>
-							<p class="item__name">
-								ЮВА - РОССИЯ
-							</p>
-							<p class="item__info">
-								Из Гонконга / Тайбэя / Сеула / Сингапура
-							</p>
-							<p class="item__text">
-								По одной сквозной накладной!
-							</p>
-						</div>
-						<div class="item__block">
-							<p class="item__title">
-								ТРАНЗИТНЫЕ ПЕРЕВОЗКИ
-							</p>
-							<p class="item__num">
-								4
-							</p>
-							<p class="item__name">
-								ЧЕРЕЗ КИТАЙ <br>
-								ТАИЛАНД <br>
-								ГОНКОНГ
-							</p>
-							<p class="item__info">
-								По сквозной накладной <br>
-								или с переоформлением
-							</p>
-						</div>
-						<div class="item__block">
-							<p class="item__title">
-								ЛОКАЛЬНЫЙ СЕРВИС В
-							</p>
-							<p class="item__num">
-								5
-							</p>
-							<p class="item__name">
-								РОССИИ И КИТАЕ
-							</p>
-							<p class="item__info">
-								Таможенное оформление, консолидация, <br> складские услуги
-							</p>
-						</div>
-						<div class="item__block">
-							<p class="item__title">
-								ЕСТЬ ВОПРОСЫ ?
-							</p>
-							<p class="item__name">
-								СВЯЖИТЕСЬ С НАМИ
-							</p>
-							<img src="img/bg2.svg" alt="">
-							<a href="#" class="item__btn btn btn_2">
-								<p>
-									Запрос на перевозку
-								</p>
-								<div>
-									<img src="img/btn2.svg" alt="" class="svg">
-								</div>
-							</a>
 						</div>
 					</div>
+					<div class="item__el">
+						<img src="img/item2.png" alt="" class="item__bg">
+						<h3>
+							Юго-Восточная и Южная Азия
+						</h3>
+						<a href="#" class="btn">
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</a>
+						<div class="item__content q">
+							<p>
+								<span>
+									Регулярные отправки <br>
+									в Корею, Японию, Тайвань, Индия, Шри-Ланка
+								</span>
+							</p>
+							<p>
+								<span> География:</span> Корея (Сеул, Пусан), Япония (Токио, Осака), Тайвань (Тайпей), Таиланд (Бангкок, Пхукет), Вьетнам (Ханой, Хошимин), Малайзия (Куала-Лумпур), Индия (Нью-Дели), Шри-Ланка (Коломбо), Сингапур и др.
+							</p>
+						</div>
+					</div>
+					<div class="item__el">
+						<img src="img/item3.png" alt="" class="item__bg">
+						<h3>
+							Ближний Восток
+						</h3>
+						<a href="#" class="btn">
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</a>
+						<div class="item__content q">
+							<p>
+								<span>
+									Регулярные отправки  <br>
+									в Турцию, ОАЭ, Иран, Оман
+								</span>
+							</p>
+							<p>
+								<span> География:</span> Стамбул; Дубай, Абу‑Даби,  Тегеран, Маскат и др. 
+							</p>
+						</div>
+					</div>
+					<div class="item__el">
+						<img src="img/item4.png" alt="" class="item__bg">
+						<h3>
+							По России и в страны СНГ
+						</h3>
+						<a href="#" class="btn">
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</a>
+						<div class="item__content q">
+							<p>
+								<span>
+									Отправки по маршрутной  <br>
+									сети Аэрофлота из Москвы и других городов
+								</span>
+							</p>
+							<p>
+								<span> География:</span>  Внутрироссийские авиаперевозки и перевозки в страны СНГ (Киргизия, Казахстан, Узбекистан)
+							</p>
+						</div>
+					</div>
+					<div class="item__el">
+						<img src="img/item5.png" alt="" class="item__bg">
+						<h3>
+							Транзитные перевозки
+						</h3>
+						<a href="#" class="btn">
+							Получить расчёт <img src="img/right.svg" alt="" class="svg">
+						</a>
+						<div class="item__content q">
+							<p>
+								<span>
+									Ключевой агент China Eastern Airlines  <br>
+									(Москва, Пулково, Казань)Агент Aeroflot Russian Airlines (Москва)
+								</span>
+							</p>
+							<p>
+								<span> География:</span> Пекин, Шанхай, Гуанчжоу, Шэньчжэнь, Чэнду, Чунцин, Сиань, Ханчжоу, Нинбо, Циндао, Харбин, Хайнань, Санья и др.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="button">
+					<a href="#" class="btn">
+						+ Запрос на перевозку <img src="img/right.svg" alt="" class="svg">
+					</a>
 				</div>
 			</div>
 		</section>
 		<section class="about" id="about">
+			<img src="img/main2.png" alt="" class="header__bg">
 			<div class="container">
-				<div class="about__wrap">
-					<img src="img/ab1.svg" alt="" class="about__fig2">
-					<img src="img/ab2.svg" alt="" class="about__fig3">
-					<img src="img/ab3.svg" alt="" class="about__fig1">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
 					<h2>
-						АЗИЯЛИНК <br class="mob"> ЛОГИСТИКС
+						Что входит в наши услуги
 					</h2>
-					<div class="about__box q">
-						<div class="about__content">
-							<p class="about__text">
-								АЗИЯЛИНК ЛОГИСТИКС - Ведущая логистическая компания, специализирующаяся на авиаперевозках грузов
-								между Россией и Китаем.
+				</div>
+				<div class="swiper2">
+					<div class="about__box swiper-wrapper q">
+						<div class="about__item swiper-slide">
+							<img src="img/about1.png" alt="">
+							<h3>
+								Логистика
+							</h3>
+							<p>
+								Подбор рейса и тарифа <br>
+								под сроки и бюджет
 							</p>
-							<p class="about__text">
-								Основное направление деятельности компании - обеспечение эффективной и быстрой доставки грузов
-								<br>
-								по воздушным путям, минимизируя сроки и обеспечивая надежность.<br> Ставя акцент на
-								международные
-								перевозки АЗИЯЛИНК ЛОГИСТИКС предлагает полный спектр услуг по управлению цепочками поставок от
-								консолидации грузов в пункте отправления до их доставки до конечного получателя.
-							</p>
-							<a href="#" class="about__btn btn">
-								<p>
-									Запрос на перевозку
-								</p>
-								<div>
-									<img src="img/btn.svg" alt="">
-								</div>
-							</a>
 						</div>
-						<div class="about__images q">
-							<div class="about__left">
-								<img src="img/pic1.png" alt="" class="about__pic1">
-								<div class="about__flex q">
-									<img src="img/pic2.png" alt="">
-									<img src="img/pic3.png" alt="">
-								</div>
-							</div>
-							<img src="img/pic4.png" alt="" class="about__pic2">
+						<div class="about__item swiper-slide">
+							<img src="img/about2.png" alt="">
+							<h3>
+								Аналитика
+							</h3>
+							<p>
+								SLA и информирование на <br> каждом этапе перевозки
+							</p>
+						</div>
+						<div class="about__item swiper-slide">
+							<img src="img/about3.png" alt="">
+							<h3>
+								Склад
+							</h3>
+							<p>
+								Бронирование грузовой ёмкости <br> и гарантия вылета
+							</p>
+						</div>
+						<div class="about__item swiper-slide">
+							<img src="img/about4.png" alt="">
+							<h3>
+								Сервис
+							</h3>
+							<p>
+								Сопровождение 24/7 - закрепленный <br> менеджер всегда с вами на связи
+							</p>
+						</div>
+						<div class="about__item swiper-slide">
+							<img src="img/about5.png" alt="">
+							<h3>
+								Упаковка
+							</h3>
+							<p>
+								Упаковка, маркирование, <br> проверка и подготовка груза к <br> отправке
+							</p>
+						</div>
+						<div class="about__item swiper-slide">
+							<img src="img/about6.png" alt="">
+							<h3>
+								Доставка
+							</h3>
+							<p>
+								Door‑to‑door, температурный <br> контроль, экспедирование
+							</p>
+						</div>
+						<div class="about__item swiper-slide">
+							<img src="img/about7.png" alt="">
+							<h3>
+								Таможня
+							</h3>
+							<p>
+								Таможенное оформление <br> (экспорт/импорт), транзит
+							</p>
 						</div>
 					</div>
+				</div>
+				<div class="pag swiper-pagination2"></div>
+				<div class="button">
+					<a href="#" class="btn">
+						+ Запрос на перевозку <img src="img/right.svg" alt="" class="svg">
+					</a>
 				</div>
 			</div>
 		</section>
 		<section class="par" id="par">
 			<div class="container">
-				<div class="par__wrap">
-					<img src="img/par.svg" alt="" class="par__fig">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
 					<h2>
-						АВИАЛИНИИ-<br class="mob">ПАРТНЕРЫ
+						Какие грузы перевозим
 					</h2>
-					<div class="par__row q">
-						<img src="img/par1.svg" alt="">
-						<img src="img/par2.svg" alt="">
-						<img src="img/par3.svg" alt="">
-						<img src="img/par4.svg" alt="">
+				</div>
+				<div class="swiper1 swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h3>
+								Генеральные
+							</h3>
+							<p>
+								Оборудование, запчасти, комплектующие, хоз. товары,одежда, обувь и т.п.
+							</p>
+							<img src="img/par1.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Ценные
+							</h3>
+							<p>
+								Электроника, оптика, ювелирные изделия, драгоценные металлы, культурные ценности <br>
+								Усиленная безопасность
+							</p>
+							<img src="img/par2.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Хрупкие
+							</h3>
+							<p>
+								Стекло, керамика, оптика; электроника, приборы; фарфор, зеркала, витрины, декоративные изделия. Спецупаковка
+							</p>
+							<img src="img/par3.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								БАДы, фармацевтика
+							</h3>
+							<p>
+								Витамины и добавки; лекарства и медикаменты разрешённые к авиа перевозке
+							</p>
+							<img src="img/par4.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Негабарит
+							</h3>
+							<p>
+								Крупногабаритные и тяжёлые грузы: техника, станки, конструкции, длинномеры, спецоборудование.
+								MSDS, совместимость классов, проектная логистика
+							</p>
+							<img src="img/par5.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Опасные
+							</h3>
+							<p>
+								Литий‑ионные батареи, химия, аэрозоли.  <br>
+								Оформление декларации опасного груза, спецупаковка, маркирование
+							</p>
+							<img src="img/par6.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Температурные
+							</h3>
+							<p>
+								Свежие продукты питания: мясо, рыба, молочка, фрукты/овощи, хлеб; бакалея, консервы, напитки, снеки. Температурные решения, быстрые стыковки
+							</p>
+							<img src="img/par7.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Сборные
+							</h3>
+							<p>
+								Консолидация партий от разных отправителей в один груз. Оптимизация стоимости
+							</p>
+							<img src="img/par8.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<h3>
+								Химия и косметика
+							</h3>
+							<p>
+								Бытовая химия; уход за кожей и волосами, декоративная косметика, парфюм и т.п.
+							</p>
+							<img src="img/par9.png" alt="">
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="info info2" id="info2">
-			<div class="container">
-				<div class="info__flex marquee2 d-flex">
+				<div class="par__nav q">
+					<div class="swiper-button-prev1 arrow">
+						<img src="img/left.svg" alt="" class="svg">
+					</div>
+					<div class="swiper-pagination1 pag"></div>
+					<div class="swiper-button-next1 arrow">
+						<img src="img/r.svg" alt="" class="svg">
+					</div>
+				</div>
+				<div class="par__bottom q">
 					<p>
-						SVO - PVG
+						Не уверены в категории? Отправьте <br> спецификацию — подберём схему и упаковку
 					</p>
-					<p>
-						SVO - PKX
-					</p>
-					<p>
-						SVO - XIY
-					</p>
-					<p>
-						SVO - SHE
-					</p>
-					<p>
-						KZN - PVG
-					</p>
-					<p>
-						LED - PVG
-					</p>
-					<p>
-						SVO - PVG - CHINA MAINLAND
-					</p>
-					<p>
-						SVO - PVG - WORLDWIDE
-					</p>
-					<p>
-						SVO - PVG
-					</p>
-					<p>
-						SVO - PKX
-					</p>
-					<p>
-						SVO - XIY
-					</p>
-					<p>
-						SVO - SHE
-					</p>
-					<p>
-						KZN - PVG
-					</p>
-					<p>
-						LED - PVG
-					</p>
-					<p>
-						SVO - PVG - CHINA MAINLAND
-					</p>
-					<p>
-						SVO - PVG - WORLDWIDE
-					</p>
+					<div class="q">
+						<a href="#" target="_blank">
+							WhatsApp
+						</a>
+						<a href="#" target="_blank">
+							Telegram
+						</a>
+						<a href="#" target="_blank">
+							Почта
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="van" id="van">
+			<img src="img/main3.png" alt="" class="header__bg">
 			<div class="container">
-				<h2>
-					преимущества
-				</h2>
-				<div class="van__row q">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						<img src="img/a.svg" alt="" class="svg"> ЗИЯЛИНК ЛОГИСТИКС
+					</h2>
+				</div>
+				<div class="van__top q">
 					<div class="van__item">
-						<img src="img/van1.svg" alt="">
+						<h3>
+							СОТРУДНИЧАЯ С НАМИ ВЫ ПОЛУЧАЕТЕ
+						</h3>
+						<p>
+							Основное направление деятельности компании - обеспечение эффективной и быстрой доставки грузов по воздушным путям, минимизируя сроки и обеспечивая надежность. 
+						</p>
+					</div>
+					<div class="van__item">
+						<h3>
+							О НАС
+						</h3>
+						<p>
+							по управлению цепочками поставок от консолидации грузов в пункте отправления до их доставки до конечного получателя.
+						</p>
+					</div>
+				</div>
+				<div class="van__row q">
+					<img src="img/van1.png" alt="">
+					<img src="img/van2.png" alt="">
+					<img src="img/van3.png" alt="">
+				</div>
+			</div>
+		</section>
+		<section class="area" id="area">
+			<div class="container">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						Прямой доступ 
+					</h2>
+				</div>
+				<p class="item__sub">
+					К мощностям авиакомпаний и отлаженный сервис
+				</p>
+				<div class="area__box q">
+					<div class="area__item">
+						<img src="img/icon1.svg" alt="" class="area__icon">
+						<img src="img/area1.png" alt="" class="area__pic">
+						<h3>
+							Аэрофлот (SU)
+						</h3>
+						<p>
+							Оборудование, запчасти, комплектующие, хоз. товары,одежда, обувь и т.п.
+						</p>
+					</div>
+					<div class="area__item">
+						<img src="img/icon2.svg" alt="" class="area__icon">
+						<img src="img/area2.png" alt="" class="area__pic">
+						<h3>
+							Экспертиза DGR
+						</h3>
+						<p>
+							Экспертиза DGR — всё по правилам IATA, корректные документы, без лишних задержек
+						</p>
+					</div>
+					<div class="area__item">
+						<img src="img/icon3.svg" alt="" class="area__icon">
+						<img src="img/area3.png" alt="" class="area__pic">
+						<h3>
+							China Eastern (MU)
+						</h3>
+						<p>
+							China Eastern (MU): грузовой агент в РФ (Москва, Санкт‑Петербург, Казань, Владивосток)
+						</p>
+					</div>
+					<div class="area__item">
+						<img src="img/icon4.svg" alt="" class="area__icon">
+						<img src="img/area4.png" alt="" class="area__pic">
+						<h3>
+							Гарантированные <br>
+							места и цены
+							(SU)
+						</h3>
+						<p>
+							Выкупленная и закреплённая грузовая ёмкость на популярных направлениях. Гарантия согласованной стоимости перевозки
+						</p>
+					</div>
+					<div class="area__item">
+						<img src="img/icon5.svg" alt="" class="area__icon">
+						<img src="img/area5.png" alt="" class="area__pic">
+						<h3>
+							Гибкая логистика <br>
+							и надёжные партнёрства
+						</h3>
+						<p>
+							Партнёрства с ведущими авиаперевозчиками и офисы в Китае — гибкость по срокам, стоимости и оперативное решение задач.
+						</p>
+					</div>
+					<div class="area__item">
+						<img src="img/icon6.svg" alt="" class="area__icon">
+						<h3>
+							Отправьте спецификацию — подберём категорию  <br>
+							и упаковку.
+						</h3>
+						<div class="q">
+							<a href="#" target="_blank">
+								WhatsApp
+							</a>
+							<a href="#" target="_blank">
+								Telegram
+							</a>
+							<a href="#" target="_blank">
+								Почта
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="per" id="per">
+			<img src="img/main4.png" alt="" class="header__bg">
+			<div class="container">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						преимущества
+					</h2>
+				</div>
+				<div class="per__box q">
+					<div class="per__item">
 						<span>
 							10+
 						</span>
 						<p>
-							лет на рынке
+							Лет  <br>
+							на рынке
 						</p>
 					</div>
-					<div class="van__item">
-						<img src="img/van2.svg" alt="">
+					<div class="per__item">
 						<span>
 							30000+
 						</span>
 						<p>
-							перевозок в год
+							Перевозок <br>
+							в год
 						</p>
 					</div>
-					<div class="van__item">
-						<img src="img/van3.svg" alt="">
+					<div class="per__item">
 						<span>
-							5
+							5+
 						</span>
 						<p>
-							офисов в Китае и России
+							Офисов в Китае <br> и России
 						</p>
 					</div>
-					<div class="van__item">
-						<img src="img/van4.svg" alt="">
+					<div class="per__item">
 						<span>
-							4
+							5+
 						</span>
 						<p>
-							прямых агентских соглашения с авиалиниями
+							Прямых агентских соглашений <br> с авиалиниями
 						</p>
 					</div>
-					<div class="van__item">
-						<img src="img/van5.svg" alt="">
+					<div class="per__item">
 						<span>
-							> 100
+							>100
 						</span>
 						<p>
-							Квалифицированный персонал с лицензиями IATA
+							Квалифицированный <br> персонал с лицензиями IATA 
 						</p>
 					</div>
+				</div>
+				<div class="button">
+					<a href="#" class="btn">
+						+ Запрос на перевозку <img src="img/right.svg" alt="" class="svg">
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="partners" id="partners">
+			<div class="container">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						АВИАЛИНИИ-ПАРТНЕРЫ
+					</h2>
+				</div>
+				<div class="partners__row">
+					<div class="partners__item">
+						<img src="img/partners1.svg" alt="">
+					</div>
+					<div class="partners__item">
+						<img src="img/partners2.svg" alt="">
+					</div>
+					<div class="partners__item">
+						<img src="img/partners3.svg" alt="">
+					</div>
+					<div class="partners__item">
+						<img src="img/partners4.svg" alt="">
+					</div>
+					<div class="partners__item">
+						<img src="img/partners5.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="work" id="work">
+			<img src="img/main5.png" alt="" class="header__bg">
+			<div class="container">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						Как мы работаем
+					</h2>
+				</div>
+				<div class="work__flex q">
+					<div class="swiper3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/work1.png" alt="">
+								<div class="work__top q">
+									<span>
+										01
+									</span>
+									<div>
+										<p>
+											Запрос
+										</p>
+										<small>
+											Планирование маршрута,  <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/work2.png" alt="">
+								<div class="work__top q">
+									<span>
+										02
+									</span>
+									<div>
+										<p>
+											Подбор маршрута
+										</p>
+										<small>
+											Планирование маршрута,  <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/work3.png" alt="">
+								<div class="work__top q">
+									<span>
+										03
+									</span>
+									<div>
+										<p>
+											Согласование условий транспортировки
+										</p>
+										<small>
+											Планирование маршрута, <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/work4.png" alt="">
+								<div class="work__top q">
+									<span>
+										04
+									</span>
+									<div>
+										<p>
+											Фиксация <br>
+											стоимости доставки
+										</p>
+										<small>
+											Планирование маршрута, <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/work5.png" alt="">
+								<div class="work__top q">
+									<span>
+										05
+									</span>
+									<div>
+										<p>
+											Прием груза <br>
+											к перевозке в аэропорту
+										</p>
+										<small>
+											Планирование маршрута, <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/work6.png" alt="">
+								<div class="work__top q">
+									<span>
+										06
+									</span>
+									<div>
+										<p>
+											Доставка груза
+										</p>
+										<small>
+											Планирование маршрута, <br>
+											сроков и условий транспортировки
+										</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination3"></div>
+				</div>
+			</div>
+		</section>
+		<section class="partners cases" id="cases">
+			<div class="container">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
+					<h2>
+						Недавние кейсы
+					</h2>
+				</div>
+				<div class="swiper4">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/case1.png" alt="">
+							<span>
+								(DGR, 480 кг)
+							</span>
+							<h3>
+								Литиевые батареи  <br>
+								в Сингапур 
+							</h3>
+							<ul>
+								<li>
+									Экспертиза DGR: проверка UN-кодов, упаковка 4G, маркировка и декларация
+								</li>
+								<li>
+									Разделение партии на совместимые позиции, отдельные AWB для классов
+								</li>
+								<li>
+									Выкуп мест на прямой рейс China Eastern, без перенакладок
+								</li>
+								<li>
+									Снижение риска отказа: документы корректны с первого раза, выпуск за 1 сутки
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/case2.png" alt="">
+							<span>
+								 (1,8 т, 3 места, oversize)
+							</span>
+							<h3>
+								Оборудование <br>
+								в Шанхай в Сингапур 
+							</h3>
+							<ul>
+								<li>
+									Паллетизация и усиление
+								</li>
+								<li>
+									Выкуп квоты на конкретный борт
+								</li>
+								<li>
+									Экономия 14% за счёт размещения и тарифа
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/case3.png" alt="">
+							<span>
+								(OАЭ, +2…+8°C, 220 кг)
+							</span>
+							<h3>
+								Биоматериалы <br>
+								в Дубай 
+							</h3>
+							<ul>
+								<li>
+									Паллетизация и усиление
+								</li>
+								<li>
+									Выкуп квоХолодовая цепь: термоконтейнеры, датчики температуры, контроль на стыковке
+								</li>
+								<li>
+									Предварительная верификация HS-кодов и разрешительной документации
+								</li>
+								<li>
+									Экспресс-квота на утренний рейс, транзит 24 часа дверь-аэропорт
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/case4.png" alt="">
+							<span>
+								(DGR, классы 3 и 8, 720 кг)
+							</span>
+							<h3>
+								Химсырьё  <br>
+								в Гуанчжоу 
+							</h3>
+							<ul>
+								<li>
+									Экспертиза DGR: проверка UN-кодов, упаковка 4G, маркировка и декларация
+								</li>
+								<li>
+									Разделение партии на совместимые позиции, отдельные AWB для классов
+								</li>
+								<li>
+									Выкуп мест на прямой рейс China Eastern, без перенакладок
+								</li>
+								<li>
+									Снижение риска отказа: документы корректны с первого раза, выпуск за 1 сутки
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/case5.png" alt="">
+							<span>
+								(оптика, 140 кг, 5 мест)
+							</span>
+							<h3>
+								Высокая ценность  <br>
+								в Анкару 
+							</h3>
+							<ul>
+								<li>
+									Доп. упаковка, пломбирование, escort до зоны сдачи, приоритетное хранение
+								</li>
+								<li>
+									Страхование “с полной ответственностью”, фотофиксация каждой перегрузки
+								</li>
+								<li>
+									Закреплённые места на популярном рейсе, стабильно по расписанию
+								</li>
+								<li>
+									Экономия 9% за счёт комбинирования тарифа и габаритов коллов
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/case6.png" alt="">
+							<span>
+								(сборная, 1,2 т, +2…+6°C)
+							</span>
+							<h3>
+								Овощи и ягоды в <br> Алматы 
+							</h3>
+							<ul>
+								<li>
+									Консолидация от 4 поставщиков, единая паллетизация и термокрышки
+								</li>
+								<li>
+									Ночной сдающий слот, ежедневный вылет, короткий транзит через хаб
+								<li>
+									Температурный контроль и приоритет на выгрузке, минимизация простоев
+								</li>
+								<li>
+									Срок “склад-склад” — 36 часов, возврат оборотной тары в 72 часа
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination4 pag"></div>
+				<div class="button">
+					<a href="#" class="btn">
+						+ Запрос на перевозку <img src="img/right.svg" alt="" class="svg">
+					</a>
 				</div>
 			</div>
 		</section>
 		<section class="call" id="call">
-			<img src="img/bg3.svg" alt="" class="call__fig">
+			<img src="img/main6.png" alt="" class="header__bg">
 			<div class="container">
-				<h2>
-					запрос <br class="mob"> на перевозку
-				</h2>
-				<form action="success.php" class="form js-form" id="popupResult" method="post">
-					<div class="form__flex q">
-						<div class="form__item">
-							<input type="text" placeholder="Имя" name="name" class="form__field" required="">
-							<label>
-								Ваше имя
-							</label>
-						</div>
-						<div class="form__item">
-							<input type="tel" placeholder="Телефон" name="tel" class="tel form__field" required="">
-							<label>
-								Ваш номер телефона
-							</label>
-						</div>
-						<div class="form__item">
-							<input type="email" placeholder="Почта" name="email" class="form__field email" required="">
-							<label>
-								Ваша почта
-							</label>
-						</div>
-					</div>
-					<textarea name="text" placeholder="Текстовое поле"></textarea>
-					<button class="btn" data-submit>
-						<p>
-							ОТПРАВИТЬ ЗАПРОС
-						</p>
-						<div>
-							<img src="img/btn.svg" alt="" class="svg">
-						</div>
-					</button>
-					<div class="calc__item">
-						<input class="form-check-input form__field custom-checkbox" type="checkbox" name="form1" id="form1"
-							value="Yes" checked>
-						<label class="form-check-label " for="form1">
-							<p>
-								Нажимая на кнопку вы соглашаетесь с <a href="#" target="_blank"> Политикой
-									конфиденциальности</a>
-							</p>
-						</label>
-					</div>
-				</form>
-			</div>
-		</section>
-		<section class="photo" id="photo">
-			<div class="container">
-				<div class="photo__wrap">
-					<img src="img/photo2.svg" alt="" class="about__fig2">
-					<img src="img/photo1.svg" alt="" class="about__fig3">
-					<img src="img/photo3.svg" alt="" class="about__fig1">
-					<div class="photo__row q">
-						<img src="img/img1.png" alt="">
-						<img src="img/img2.png" alt="">
-						<img src="img/img3.png" alt="">
-						<img src="img/img4.png" alt="">
-						<img src="img/img5.png" alt="">
-						<img src="img/img6.png" alt="">
-						<img src="img/img7.png" alt="">
-						<img src="img/img8.png" alt="">
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="faq" id="faq">
-			<div class="container">
-				<div class="faq__wrap">
-					<img src="img/faq.svg" alt="" class="faq__fig">
+				<div class="title">
+					<img src="img/plan.svg" alt="">
 					<h2>
-						вопрос-ответ
+						получить предложение
 					</h2>
-					<div class="accordeon">
-						<div class="accordeon-container">
-							<li class="accordeon__item">
-								<div class="accordeon__button closed">Какие виды грузов можно перевозить из России в Китай
-									авиаперевозками?</div>
-								<ul class="accordeon__panel">
-									<li class="panel__text">
-										<p class="panel__info">
-											В России это Шереметьево и Домодедово, а в Китае — Пекин, Шанхай и Гуанчжоу, которые
-											являются крупными логистическими узлами для международных грузоперевозок.
-										</p>
-										<p class="panel__info">
-											Время доставки обычно занимает от 1 до 3 дней, в зависимости от маршрута, объема груза
-											и
-											конкретных условий логистики. Для безопасности груза используют специальные упаковочные
-											материалы, контроль за температурой и влажностью, а также отслеживание.
-										</p>
-									</li>
-								</ul>
-							</li>
-							<li class="accordeon__item">
-								<div class="accordeon__button closed">Сколько времени занимает авиадоставка груза из России в
-									Китай?</div>
-								<ul class="accordeon__panel">
-									<li class="panel__text">
-										<p class="panel__info">
-											В России это Шереметьево и Домодедово, а в Китае — Пекин, Шанхай и Гуанчжоу, которые
-											являются крупными логистическими узлами для международных грузоперевозок.
-										</p>
-										<p class="panel__info">
-											Время доставки обычно занимает от 1 до 3 дней, в зависимости от маршрута, объема груза
-											и
-											конкретных условий логистики. Для безопасности груза используют специальные упаковочные
-											материалы, контроль за температурой и влажностью, а также отслеживание.
-										</p>
-									</li>
-								</ul>
-							</li>
-							<li class="accordeon__item">
-								<div class="accordeon__button closed">Какие документы необходимы для авиаперевозки грузов между
-									Россией и Китаем?</div>
-								<ul class="accordeon__panel">
-									<li class="panel__text">
-										<p class="panel__info">
-											В России это Шереметьево и Домодедово, а в Китае — Пекин, Шанхай и Гуанчжоу, которые
-											являются крупными логистическими узлами для международных грузоперевозок.
-										</p>
-										<p class="panel__info">
-											Время доставки обычно занимает от 1 до 3 дней, в зависимости от маршрута, объема груза
-											и
-											конкретных условий логистики. Для безопасности груза используют специальные упаковочные
-											материалы, контроль за температурой и влажностью, а также отслеживание.
-										</p>
-									</li>
-								</ul>
-							</li>
-							<li class="accordeon__item">
-								<div class="accordeon__button closed">Какие аэропорты чаще всего используются для грузоперевозок
-									между Россией и Китаем?</div>
-								<ul class="accordeon__panel">
-									<li class="panel__text">
-										<p class="panel__info">
-											В России это Шереметьево и Домодедово, а в Китае — Пекин, Шанхай и Гуанчжоу, которые
-											являются крупными логистическими узлами для международных грузоперевозок.
-										</p>
-										<p class="panel__info">
-											Время доставки обычно занимает от 1 до 3 дней, в зависимости от маршрута, объема груза
-											и
-											конкретных условий логистики. Для безопасности груза используют специальные упаковочные
-											материалы, контроль за температурой и влажностью, а также отслеживание.
-										</p>
-									</li>
-								</ul>
-							</li>
-							<li class="accordeon__item">
-								<div class="accordeon__button closed">Как обеспечить безопасность груза при авиаперевозке?</div>
-								<ul class="accordeon__panel">
-									<li class="panel__text">
-										<p class="panel__info">
-											В России это Шереметьево и Домодедово, а в Китае — Пекин, Шанхай и Гуанчжоу, которые
-											являются крупными логистическими узлами для международных грузоперевозок.
-										</p>
-										<p class="panel__info">
-											Время доставки обычно занимает от 1 до 3 дней, в зависимости от маршрута, объема груза
-											и
-											конкретных условий логистики. Для безопасности груза используют специальные упаковочные
-											материалы, контроль за температурой и влажностью, а также отслеживание.
-										</p>
-									</li>
-								</ul>
-							</li>
-						</div>
-					</div>
 				</div>
+				<div class="call__wrap">
+					<form action="success.php" class="form js-form" id="popupResult" method="post">
+						<div class="form__flex q">
+							<div class="form__item">
+								<input type="text" placeholder="Имя" name="name" class="form__field" required="">
+								<label>
+									Ваше имя
+								</label>
+							</div>
+							<div class="form__item">
+								<input type="tel" placeholder="Телефон" name="tel" class="tel form__field" required="">
+								<label>
+									Ваш номер телефона
+								</label>
+							</div>
+							<div class="form__item">
+								<input type="email" placeholder="Почта" name="email" class="form__field email" required="">
+								<label>
+									Ваша почта
+								</label>
+							</div>
+						</div>
+						<div class="form__item">
+							<label>
+								Маршрут, вес/габариты, тип груза, дедлайн
+							</label>
+							<textarea name="text" placeholder="Маршрут, вес, габариты, тип груза и срок доставки"></textarea>
+						</div>
+						<div class="calc__item">
+							<input class="form-check-input form__field custom-checkbox" type="checkbox" name="form1" id="form1"
+								value="Yes">
+							<label class="form-check-label " for="form1">
+								<p>
+									Я ознакомлен(а) с <a href="#" target="_blank">  Политикой конфиденциальности</a> и даю свое Согласие на <a href="#" target="_blank"> обработку персональных данных</a>
+								</p>
+							</label>
+						</div>
+						<button class="btn" data-submit>
+							Получить <img src="img/right.svg" alt="" class="svg">
+						</button>
+		
+					</form>
+				</div>
+				<picture>
+					<source srcset="img/air2-mob.png" media="(max-width: 576px)">
+					<img src="img/air2.png" alt="" class="call__air">
+				</picture>
 			</div>
 		</section>
 		<section class="contacts" id="contacts">
 			<div class="container">
-				<div class="contacts__wrap">
-					<picture>
-						<source srcset="img/cc.svg" media="(max-width: 576px)">
-						<img src="img/cont.svg" alt="" class="contacts__fig">
-					</picture>
+				<div class="title">
+					<img src="img/plan.svg" alt="">
 					<h2>
 						КОНТАКТЫ
 					</h2>
-					<div class="contacts__info q">
-						<a href="tel:+78002227552" class="contacts__tel">
-							+7 800 222 75 52
-						</a>
-						<a href="mailto:request@asi-log.com" class="contacts__mail">
-							request@asi-log.com
-						</a>
-						<a href="https://wa.me/79263461220" class="contacts__whatsapp" target="_blank">
-							<img src="img/cont2.svg" alt="">
-						</a>
-					</div>
-					<p class="contacts__text">
-						Химки, Московская область, Шереметьевское шоссе, вл. 6К, офис 229
-					</p>
-					<a href="#" class="about__btn btn">
-						<p>
-							Запрос на перевозку
-						</p>
-						<div>
-							<img src="img/btn.svg" alt="">
+				</div>
+				<div class="contacts__area">
+					<div class="contacts__wrap">
+						<div class="contacts__info">
+							<div class="contacts__top q">
+								<a href="mailto:request@asi-log.com" class="contacts__mail">
+									request@asi-log.com
+								</a>
+								<a href="tel:+78002227552" class="contacts__tel">
+									+7 800 222 75 52
+								</a>
+							</div>
+							<p class="contacts__text">
+								Химки, Московская область, Шереметьевское шоссе, вл. 6К, офис 229
+							</p>
 						</div>
-					</a>
+						<div class="contacts__content q">
+							<div class="q">
+								<a href="https://wa.me/79263461220" class="nav__whatsapp">
+									<img src="img/tel2.svg" alt=""  class="svg">
+								</a>
+								<a href="https://wa.me/79263461220" class="nav__whatsapp">
+									<img src="img/tel.svg" alt=""  class="svg">
+								</a>
+							</div>
+							<a href="#" class="contacts__btn btn">
+								+ запрос на перевозку
+							</a>
+						</div>
+					</div>
+					<div id="map"></div>
 				</div>
 			</div>
-			<div id="map"></div>
 		</section>
 		<footer class="footer" id="footer">
 			<div class="container">
-				<div class="footer__top q">
-					<img src="img/f-logo.svg" alt="" class="footer__logo">
-					<p>
-						Химки, Московская область, Шереметьевское шоссе, вл. 6К, офис 229
-					</p>
-					<a href="https://wa.me/78002227552" class="footer__link" target="_blank">
-						<img src="img/f.svg" alt="">
-					</a>
-				</div>
+				<picture>
+					<source srcset="img/footer2.svg" media="(max-width: 576px)">
+					<img src="img/footer.svg" alt="" class="footer__logo">
+				</picture>
 				<div class="footer__center q">
 					<ul>
 						<li>
-							<a href="#item" class="go_to">
-								Мы предлагаем
+							<a href="#tar" class="go_to">
+								Продукты
 							</a>
 						</li>
 						<li>
-							<a href="#about" class="go_to">
-								О компании
-							</a>
-						</li>
-						<li>
-							<a href="#par" class="go_to">
+							<a href="#partners" class="go_to">
 								Партнеры
 							</a>
 						</li>
 						<li>
-							<a href="#van" class="go_to">
+							<a href="#per" class="go_to">
 								Преимущества
 							</a>
 						</li>
@@ -744,30 +1289,38 @@
 							</a>
 						</li>
 					</ul>
-					<div class="footer__flex q">
-						<a href="tel:+78002227552" class="footer__tel">
-							+7 800 222 75 52
-						</a>
-						<a href="#" class="footer__call">
-							+ Связаться с нами
+					<div class="contacts__content q">
+						<div class="q">
+							<a href="https://wa.me/79263461220" class="nav__whatsapp">
+								<img src="img/tel2.svg" alt=""  class="svg">
+							</a>
+							<a href="https://wa.me/79263461220" class="nav__whatsapp">
+								<img src="img/tel.svg" alt=""  class="svg">
+							</a>
+						</div>
+						<a href="#" class="contacts__btn btn">
+							+ запрос на перевозку
 						</a>
 					</div>
 				</div>
 				<div class="footer__bottom q">
+					<a href="tel:+78002227552" class="footer__tel">
+						+7 800 222 75 52
+					</a>
 					<div class="footer__area q">
-						<a href="https://gasfort.ru/" target="_blank">
-							<img src="img/com.svg" alt="">
-						</a>
 						<a href="#" class="footer__policy" target="_blank">
 							Политика конфиденциальности
 						</a>
+						<p>
+							© 2024 Все права защищены
+						</p>
+						<a href="https://gasfort.ru/" target="_blank" class="footer__com">
+							<img src="img/com.svg" alt="">
+						</a>
 					</div>
-					<p>
-						© 2024 Все права защищены
-					</p>
-					<a href="#header" class="footer__up q go_to">
+					<!-- <a href="#header" class="footer__up q go_to">
 						<img src="img/up.svg" alt=""> Наверх
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</footer>
@@ -872,7 +1425,7 @@
 				// Путь до нашей картинки
 				iconImageHref: 'img/map.svg',
 				// Размер по ширине и высоте
-				iconImageSize: [90, 90],
+				iconImageSize: [136, 136],
 				// Смещение левого верхнего угла иконки относительно
 				// её «ножки» (точки привязки).
 				iconImageOffset: [-50, -50]
@@ -891,6 +1444,7 @@
 		}
 	</script>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 	<script src="js/all.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>

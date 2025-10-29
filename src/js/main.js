@@ -15,7 +15,60 @@ document.addEventListener("DOMContentLoaded", () => {
     return false;
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("header, section");
+  const scrollNav = document.querySelector(".scroll-nav");
+  const currentEl = scrollNav.querySelector(".scroll-nav__current");
+  const nextEls = scrollNav.querySelectorAll(".scroll-nav__next span");
 
+  function updateNav() {
+    let currentIndex = 0;
+    const scrollY = window.scrollY + window.innerHeight / 2;
+    const docHeight = document.body.scrollHeight;
+    const maxScroll = docHeight - window.innerHeight;
+
+    sections.forEach((sec, i) => {
+      const rect = sec.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
+      const bottom = top + rect.height;
+
+      if (scrollY >= top && scrollY < bottom) {
+        currentIndex = i;
+      }
+    });
+
+    // ✅ если мы ниже последней секции (перед футером или в нём)
+    const lastSection = sections[sections.length - 1];
+    const lastBottom = lastSection.offsetTop + lastSection.offsetHeight;
+    if (window.scrollY + window.innerHeight >= lastBottom) {
+      currentIndex = sections.length - 1;
+    }
+
+    // Формат с ведущим нулём
+    const currentNum = String(currentIndex + 1).padStart(2, "0");
+    currentEl.textContent = currentNum;
+
+    // Следующие две секции
+    nextEls[0].textContent = sections[currentIndex + 1]
+      ? String(currentIndex + 2).padStart(2, "0")
+      : "";
+    nextEls[1].textContent = sections[currentIndex + 2]
+      ? String(currentIndex + 3).padStart(2, "0")
+      : "";
+
+    // Классы для 12-й и 13-й секций
+    scrollNav.classList.remove("one", "two");
+    if (currentIndex + 1 >= 13) {
+      scrollNav.classList.add("two");
+    } else if (currentIndex + 1 === 12) {
+      scrollNav.classList.add("one");
+    }
+  }
+
+  updateNav();
+  window.addEventListener("scroll", updateNav);
+  window.addEventListener("resize", updateNav);
+});
 document.addEventListener('DOMContentLoaded', function () {
   $('.articmodal-close').click(function (e) {
     $.arcticmodal('close');
@@ -379,6 +432,142 @@ document.addEventListener("DOMContentLoaded", () => {
       //ваша функция закрытия окна
       popupBg2.classList.remove('active');
       popup2.classList.remove('active');
+    }
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper1 = new Swiper('.swiper1', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination1",
+        type: "progressbar",
+      },
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 0,
+        loop: true,
+        slidesPerView: 1,
+         pagination: {
+        type: "bullets",
+      },
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2, 
+        pagination: {
+        type: "bullets",
+      },
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      }
+    }
+  });
+  const swiper2 = new Swiper('.swiper2', {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    allowTouchMove: false,
+    pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+      },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1,
+      },
+      767: {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
+      992: {
+        spaceBetween: 0,
+        slidesPerView: 1,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 2, 
+      }
+    }
+  });
+   const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination3",
+        clickable: true,
+      },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 0,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 1, 
+         pagination: {
+          el: ".swiper-pagination3",
+        },
+      }
+    }
+  });
+  const swiper4 = new Swiper('.swiper4', {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    allowTouchMove: false,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        allowTouchMove: true,
+        slidesPerView: 1,
+        pagination: {
+        el: ".swiper-pagination4",
+        clickable: true,
+      },
+      },
+      767: {
+        spaceBetween: 10,
+        allowTouchMove: true,
+        slidesPerView: 1,
+        pagination: {
+        el: ".swiper-pagination4",
+        clickable: true,
+      },
+      },
+      992: {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      1200: {
+        spaceBetween: 0,
+        slidesPerView: 2, 
+      }
     }
   });
 });
