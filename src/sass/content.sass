@@ -9,9 +9,10 @@
    fill: white
    z-index: 20
    transition: 0.5s
-   transform: rotate(90deg)
+   transform: rotate(0deg)
    &:hover 
-      transform: rotate(0deg)
+      transform: rotate(90deg)
+      opacity: 0.7
 .box-modal__close 
    z-index: 10
    cursor: pointer
@@ -104,7 +105,7 @@ textarea:-moz-placeholder
     z-index: 22
 .popup, .popup2
    position: absolute
-   top: 29rem
+   top: 20rem
    left: 50%
    transform: translate(-50%, -50%) scale(0)
    width: 100%
@@ -115,6 +116,15 @@ textarea:-moz-placeholder
    padding: 40px 0px
    .call__wrap
       margin-top: 30px
+   .title 
+      .close-popup
+         right: 51px
+         top: 62px
+         left: inherit
+.popup.active, .popup2.active
+   transform: translate(-50%, -50%) scale(1)
+   transition: 0.5s all
+   z-index: 23
 .custom-checkbox 
    position: absolute
    z-index: -1
@@ -903,6 +913,15 @@ ul.info li
          &:hover 
             background: rgb(49, 60, 140)
             color: white
+         &:first-of-type
+            left: 0
+            top: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            z-index: 2
+            display: block
+            background: transparent !important
       &:hover 
          a
             opacity: 1
@@ -1234,6 +1253,9 @@ ul.info li
          font-size: 20px
          font-weight: 500
          line-height: 24px
+         margin-bottom: 10px
+         &:last-child
+            margin-bottom: 0
    &__row 
       justify-content: space-between
       align-items: center
@@ -1619,7 +1641,7 @@ ul.info li
          font-weight: 500
          line-height: 24px
       &:last-child
-         height: 534px
+         height: 605px
          background: rgba(255, 255, 255, 0.1)
    &__icon 
       margin-bottom: 52px
@@ -1760,13 +1782,15 @@ ul.info li
          line-height: 48px
          position: relative
          z-index: 2
+         flex: 1 0 auto 
+         max-width: 120px
       p 
          color: rgba(255, 255, 255, 1)
          font-size: 45px
          font-weight: 700
-         line-height: 54px
+         line-height: 100%
          transition: 0.5s
-         margin-bottom: 5px
+         margin-bottom: 10px
       small 
          opacity: 0.6
          color: rgba(255, 255, 255, 1)
@@ -1787,7 +1811,7 @@ ul.info li
          display: flex
          height: auto
          width: 19%
-         width: 140px
+         width: 180px
          height: 572px
          border-radius: 10px
          background: rgba(255, 255, 255, 1)
@@ -1812,6 +1836,8 @@ ul.info li
             font-size: 28px
             font-weight: 600
             line-height: 34px
+            position: relative
+            left: -18px
          &:before
             content: "Подбор маршрута"
             display: block
@@ -1823,8 +1849,8 @@ ul.info li
             width: 402px
             height: auto
             position: relative
-            left: 154px
-            top: -209px
+            left: 135px
+            top: -191px
             transition: 0.5s
          &:first-child
             &:after
@@ -1837,26 +1863,22 @@ ul.info li
                content: "02"
             &:before 
                content: "Подбор маршрута"
-               top: -229px
+               top: -211px
          &:nth-child(3)
             &:after
                content: "03"
             &:before 
-               content: "Согласование условий транспортировки "
+               content: "Фиксация стоимости и сроков доставки"
          &:nth-child(4)
             &:after
                content: "04"
             &:before 
-               content: "Фиксация стоимости доставки"
+               content: "Бронирование и согласование даты подбора груза"
          &:nth-child(5)
             &:after
                content: "05"
             &:before 
-               content: "Прием груза к перевозке в аэропорту"
-         &:nth-child(6)
-            &:after
-               content: "06"
-            &:before 
+               top: -211px
                content: "Доставка груза"
          &:hover 
             &:before 
@@ -1878,10 +1900,20 @@ ul.info li
          box-sizing: border-box
          border: 1px solid rgba(196, 196, 196, 1)
          border-radius: 10px
-         padding: 350px 30px 30px
+         padding: 304px 30px 30px
          display: flex
          flex-direction: column 
          align-items: flex-start
+         &:after 
+            display: block
+            content: ""
+            position: absolute
+            top: 0
+            z-index: 0
+            left: 0
+            background: rgba(0, 0 , 0 , 0.3)
+            width: 100%
+            height: 100%
          img 
             position: absolute
             top: 0
@@ -1892,6 +1924,8 @@ ul.info li
             object-fit: cover
          span 
             display: flex
+            position: relative
+            z-index: 2
             align-items: center
             justify-content: center
             margin-bottom: 30px
@@ -1903,6 +1937,14 @@ ul.info li
             font-size: 20px
             font-weight: 700
             line-height: 24px
+         p 
+            position: relative
+            z-index: 2
+            font-size: 23px
+            font-weight: 700
+            line-height: 120%
+            margin-bottom: 20px
+            color: white
          h3 
             margin-top: 0
             margin-bottom: 32px 
@@ -1910,8 +1952,12 @@ ul.info li
             font-size: 32px
             font-weight: 800
             line-height: 39px
+            position: relative
+            z-index: 2
             text-transform: uppercase
          ul 
+            position: relative
+            z-index: 2
             li 
                display: flex
                align-items: flex-start
@@ -1934,6 +1980,15 @@ ul.info li
                   margin-right: 10px
                &:last-child
                   margin-bottom: 0
+               &:first-child
+                  margin-bottom: 20px
+                  &::before
+                     display: none
+         &:first-child
+            ul li:first-child
+               margin-bottom: 5px
+               &:before 
+                  display: inline-flex
 .tar 
    position: relative
    padding: 180px 0 0
@@ -1981,3 +2036,60 @@ ul.info li
       border: 1px solid rgba(255, 255, 255, 0.2)
       border-radius: 10px
       background: rgba(49, 60, 140, 1)
+.header-policy 
+   padding-bottom: 0
+   .header__wrap
+      padding: 100px 0
+   h1 
+      font-size: 75.87px
+      line-height: 100%
+.policy 
+   padding: 180px 0
+   &__item 
+      width: 100%
+      max-width: 83%
+      margin-bottom: 50px
+      &:last-child
+         margin-bottom: 0
+      p 
+         color: rgba(255, 255, 255, 1)
+         font-size: 20px
+         font-weight: 400
+         line-height: 120%
+         margin-bottom: 20px
+      h3 
+         margin-top: 0
+         margin-bottom: 20px
+         color: rgba(255, 255, 255, 1)
+         font-size: 30px
+         font-weight: 700
+         line-height: 120%
+.call__fig 
+   top: 0
+   height: 100%
+   width: 100%
+   position: absolute
+   left: 0
+   object-fit: cover
+#popup2
+   .btn 
+      transform: inherit !important
+      position: initial !important
+      margin-top: 50px
+      width: 100%
+      height: 70px
+      border-radius: 82px
+      background: rgba(255, 255, 255, 0.15)
+      color: white
+      border: none
+      rect 
+         fill: white
+      path 
+         stroke: rgba(49, 60, 140, 1)
+      &:hover 
+         background: white !important
+         color: $blue !important
+         rect 
+            fill: rgba(49, 60, 140, 1)
+         path 
+            stroke: white

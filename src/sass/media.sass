@@ -107,7 +107,7 @@
    .work .swiper-pagination3 span:before
       font-size: 24px
       line-height: 28px
-      left: 134px
+      left: 115px
       top: -179px
       width: 361px
    .work .swiper-pagination3 span:nth-child(2):before
@@ -127,21 +127,25 @@
       margin-top: 5px
       line-height: 120%
    .work .swiper-pagination3 span
-      width: 115px
+      width: 149px
       height: 500px
       padding: 20px 10px
+   .work .swiper-pagination3 span:first-child:before
+      top: -198px
+   .work .swiper-pagination3 span:nth-child(5):before
+      top: -198px
    .work .swiper-pagination3 span:after
       width: 80px
       height: 80px
       font-size: 25px
       position: relative
-      left: -7px
+      left: -23px
    .work .swiper3 .swiper-slide
       height: 500px
    .cases .swiper4 .swiper-slide
       max-width: 48%
       height: 700px
-      padding-top: 257px
+      padding-top: 232px
    .cases .swiper4 .swiper-slide h3
       font-size: 28px
       line-height: 120%
@@ -172,6 +176,14 @@
       height: 480px
    .call
       padding-top: 120px
+   .header-policy h1
+      font-size: 58px
+   .policy
+      padding: 100px 0
+   .popup .title .close-popup, .popup2 .title .close-popup
+      top: 51px
+   .popup, .popup2
+      top: 20rem
 @media screen and (max-width: 1350px)
    .container
       max-width: 1200px !important
@@ -209,11 +221,13 @@
       width: 32%
       padding: 20px 40px
    .work .swiper-pagination3 span
-      width: 104px
+      width: 130px
    .work .swiper-pagination3 span:after
-      left: -2px
+      left: -14px
    .cases .swiper4 .swiper-slide
       max-width: 47.8%
+   .work .swiper-pagination3 span:before
+      left: 123px
    .contacts__info
       width: 50%
    .contacts__top a
@@ -542,6 +556,13 @@
          display: none
    .form__flex
       gap: 10px
+   .popup, .popup2
+      top: 28rem
+      background: url(/img/bg3.png) no-repeat center center / cover
+   .popup .title .close-popup, .popup2 .title .close-popup
+      top: 26px
+   .cases .swiper4 .swiper-slide
+      padding-top: 186px
 @media ( max-width: 991px )
    input, textarea, select
       -webkit-appearance: none
@@ -880,6 +901,17 @@
       font-size: 25px
    .footer__policy, .footer__bottom p
       font-size: 14px
+   .policy__item
+      max-width: 100%
+   .policy
+      padding: 50px 0
+   .header-policy
+      padding-bottom: 0 !important
+      .header__wrap
+         padding: 50px 0
+   .header-policy h1
+      font-size: 23px
+      text-align: left
 @media screen and (max-width: 767px)
    .container
       max-width: 540px !important
@@ -890,7 +922,7 @@
       .call
          padding: 0
    .popup, .popup2
-      top: 26rem
+      top: 28rem
    h1 
       font-size: 34px
    .header__wrap
@@ -966,6 +998,25 @@
          width: 100%
    .contacts__btn
       height: 60px
+   .policy__item p
+      font-size: 14px
+   .policy__item h3
+      font-size: 18px
+   .policy__item
+      margin-bottom: 30px
+   .header-policy 
+      .title img
+         right: 57px
+   .popup, .popup2
+      top: 28rem
+      .call .title img:first-of-type
+         display: none
+      h2 
+         text-align: center
+   .popup .title .close-popup, .popup2 .title .close-popup 
+      top: -15px
+      right: 50%
+      margin-right: -15px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -982,8 +1033,10 @@
    .mob 
       display: block !important
    .popup 
-      padding-left: 20px
-      padding-right: 20px
+      padding-left: 0px
+      padding-right: 0px
+      padding-top: 180px
+      top: 22rem
    .container
       padding: 0 20px
    .nav__box
@@ -1070,3 +1123,16 @@
       margin-top: 30px
    .call
       padding-bottom: 30px
+   #popup2 
+      .popup2
+         background: transparent
+         top: 20rem
+      .call__fig
+         display: block !important
+   .call__fig
+      display: none
+   .cases .swiper4 .swiper-slide h3
+      br 
+         display: none
+   .cases .swiper4 .swiper-slide
+      height: auto

@@ -75,93 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  $(document).ready(function () {
-    $('[data-submit]').on('click', function (e) {
-      e.preventDefault();
-      $(this).parents('form').submit();
-    })
-    $.validator.addMethod(
-      "regex",
-      function (value, element, regexp) {
-        var re = new RegExp(regexp);
-        return this.optional(element) || re.test(value);
-      },
-      "Please check your input."
-    );
-    function valEl(el) {
 
-      el.validate({
-        rules: {
-          tel: {
-            required: true,
-            regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
-          },
-          name: {
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          }
-        },
-        messages: {
-          tel: {
-            required: 'Заполните поле',
-            regex: 'Телефон может содержать символы + - ()'
-          },
-          name: {
-            required: 'Заполните поле',
-          },
-          text: {
-            required: 'Заполните поле',
-          },
-          email: {
-            required: 'Заполните поле',
-            email: 'Неверный формат E-mail'
-          }
-        },
-        submitHandler: function (form) {
-          $('#loader').fadeIn();
-          var $form = $(form);
-          var $formId = $(form).attr('id');
-          switch ($formId) {
-            case 'popupResult':
-              $.ajax({
-                type: 'POST',
-                url: $form.attr('action'),
-                data: $form.serialize(),
-              })
-                .always(function (response) {
-                  setTimeout(function () {
-                    $('#loader').fadeOut();
-                  }, 800);
-                  setTimeout(function () {
-                    $.arcticmodal('close');
-                    $('#popup-thank').arcticmodal({});
-                    $form.trigger('reset');
-                    //строки для остлеживания целей в Я.Метрике и Google Analytics
-                  }, 1100);
-
-                });
-              break;
-          }
-          return false;
-        }
-      })
-    }
-
-    $('.js-form').each(function () {
-      valEl($(this));
-    });
-    $('[data-scroll]').on('click', function () {
-      $('html, body').animate({
-        scrollTop: $($.attr(this, 'data-scroll')).offset().top
-      }, 2000);
-      event.preventDefault();
-    })
-  });
-});
 window.addEventListener("DOMContentLoaded", function () {
   [].forEach.call(document.querySelectorAll('.tel'), function (input) {
     var keyCode;
@@ -369,17 +283,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   //popup1
-  let popupBg = document.querySelector('.popup__bg');
-  let popup = document.querySelector('.popup');
-  let openPopupButtons = document.querySelectorAll('a.btn, .nav__call, .footer__call');
-  let closePopupButton = document.querySelector('.close-popup');
+  const popupBg = document.querySelector('.popup__bg');
+  const popup = document.querySelector('.popup');
+  const openPopupButtons = document.querySelectorAll('section a.btn, .nav__call, .footer__call');
+  const closePopupButton = document.querySelector('.close-popup');
 
   openPopupButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
       popupBg.classList.add('active');
       popup.classList.add('active');
-    })
+    });
   });
 
   closePopupButton.addEventListener('click', () => {
@@ -393,32 +307,24 @@ document.addEventListener("DOMContentLoaded", () => {
       popup.classList.remove('active');
     }
   });
-  document.addEventListener('keydown', function (e) {
+
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      //ваша функция закрытия окна
       popupBg.classList.remove('active');
       popup.classList.remove('active');
     }
   });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  //popup2
-  let popupBg2 = document.querySelector('.popup__bg2');
-  let popup2 = document.querySelector('.popup2');
-  let openPopupButtons2 = document.querySelectorAll('.a2');
-  let closePopupButton2 = document.querySelector('.close-popup2');
 
-  openPopupButtons2.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      popupBg2.classList.add('active');
-      popup2.classList.add('active');
-    })
-  });
+ // popup2
+  const popupBg2 = document.querySelector('.popup__bg2');
+  const popup2 = document.querySelector('.popup2');
+  const closePopupButton2 = document.querySelectorAll('.popup__bg2 .close-popup');
 
-  closePopupButton2.addEventListener('click', () => {
-    popupBg2.classList.remove('active');
-    popup2.classList.remove('active');
+  closePopupButton2.forEach(btn => {
+    btn.addEventListener('click', () => {
+      popupBg2.classList.remove('active');
+      popup2.classList.remove('active');
+    });
   });
 
   document.addEventListener('click', (e) => {
@@ -427,12 +333,104 @@ document.addEventListener("DOMContentLoaded", () => {
       popup2.classList.remove('active');
     }
   });
-  document.addEventListener('keydown', function (e) {
+
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      //ваша функция закрытия окна
       popupBg2.classList.remove('active');
       popup2.classList.remove('active');
     }
+  });
+
+  // форма + валидация + отправка
+  $(document).ready(function () {
+    $('[data-submit]').on('click', function (e) {
+      e.preventDefault();
+      $(this).parents('form').submit();
+    });
+
+    $.validator.addMethod(
+      "regex",
+      function (value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+      },
+      "Please check your input."
+    );
+
+    function valEl(el) {
+      el.validate({
+        rules: {
+          tel: {
+            required: true,
+            regex: '^([\\+]+)*[0-9\\x20\\x28\\x29\\-]{5,20}$'
+          },
+          name: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          tel: {
+            required: 'Заполните поле',
+            regex: 'Телефон может содержать символы + - ()'
+          },
+          name: {
+            required: 'Заполните поле'
+          },
+          text: {
+            required: 'Заполните поле'
+          },
+          email: {
+            required: 'Заполните поле',
+            email: 'Неверный формат E-mail'
+          }
+        },
+        submitHandler: function (form) {
+          $('#loader').fadeIn();
+          const $form = $(form);
+
+          $.ajax({
+            type: 'POST',
+            url: $form.attr('action'),
+            data: $form.serialize(),
+          })
+            .always(function (response) {
+              setTimeout(() => {
+                $('#loader').fadeOut();
+              }, 800);
+
+              setTimeout(() => {
+                // закрываем popup1
+                popupBg.classList.remove('active');
+                popup.classList.remove('active');
+
+                // открываем popup2
+                popupBg2.classList.add('active');
+                popup2.classList.add('active');
+
+                // очищаем форму
+                $form.trigger('reset');
+              }, 1100);
+            });
+
+          return false;
+        }
+      });
+    }
+
+    $('.js-form').each(function () {
+      valEl($(this));
+    });
+
+    $('[data-scroll]').on('click', function (event) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'data-scroll')).offset().top
+      }, 2000);
+    });
   });
 });
 document.addEventListener('DOMContentLoaded', function () {
