@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //popup1
   const popupBg = document.querySelector('.popup__bg');
   const popup = document.querySelector('.popup');
-  const openPopupButtons = document.querySelectorAll('section a.btn, .nav__call, .footer__call');
+  const openPopupButtons = document.querySelectorAll('section a.btn, .nav__call, .footer__call, .item__el');
   const closePopupButton = document.querySelector('.close-popup');
 
   openPopupButtons.forEach((button) => {

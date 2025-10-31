@@ -52,7 +52,6 @@
 			<img src="img/pag3.svg" alt="" class="get3">
 		</div>
 		<header class="header" id="header">
-			<img src="img/main1.png" alt="" class="header__bg">
 			<nav class="nav">
 				<div class="container">
 					<div class="nav__box q">
@@ -151,6 +150,9 @@
 					</a>
 				</div>
 			</div>
+		</header>
+		<main class="main" id="main">
+			<img src="img/main1.png" alt="" class="header__bg">
 			<div class="container cont">
 				<picture>
 					<source srcset="img/air-mob.png" media="(max-width: 576px)">
@@ -179,7 +181,7 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</main>
 		<section class="tar" id="tar">
 			<img src="img/main7.png" alt="" class="header__bg">
 			<div class="container">
@@ -213,23 +215,15 @@
 					<form action="success.php" class="form js-form" id="popupResult" method="post">
 						<div class="form__flex q">
 							<div class="form__item form__item_1">
-								<select class="select">
-									<option value="1">Москва (SVO/DME..)Москва (SVO/DME..)</option>
-									<option value="2">Москва</option>
-									<option value="3">Москва</option>
-								</select>
+								<input type="text" placeholder="Москва (SVO/DME..)" name="name" class="form__field" required="">
 								<label>
 									Откуда
 								</label>
 							</div>
 							<div class="form__item form__item_2">
-								<select class="select">
-									<option value="1">Шанхай/Дубай/Сеул</option>
-									<option value="2">Москва</option>
-									<option value="3">Москва</option>
-								</select>
+								<input type="text" placeholder="Шанхай/Дубай/Сеул" name="name" class="form__field" required="">
 								<label>
-									Откуда
+									Куда
 								</label>
 							</div>
 							<div class="form__item form__item_3">
@@ -239,11 +233,7 @@
 								</label>
 							</div>
 							<div class="form__item form__item_4">
-								<select class="select">
-									<option value="1">Генеральный</option>
-									<option value="2">Генеральный1</option>
-									<option value="3">Генеральный2</option>
-								</select>
+								<input type="text" placeholder="Генеральный" name="name" class="form__field" required="">
 								<label>
 									Тип груза
 								</label>
@@ -274,7 +264,7 @@
 				<div class="info__bottom">
 					<div class="container">
 						<div class="info__flex q">
-							<a href="#" class="info__item">
+							<a href="#item" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										Направления
@@ -284,7 +274,7 @@
 								<img src="img/info1.png" alt="" class="info__pic">
 								<img src="img/i2.svg" alt="" class="info__icon">
 							</a>
-							<a href="#" class="info__item">
+							<a href="#par" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										Типы грузов
@@ -294,7 +284,7 @@
 								<img src="img/info2.png" alt="" class="info__pic">
 								<img src="img/i2.svg" alt="" class="info__icon">
 							</a>
-							<a href="#" class="info__item">
+							<a href="#van" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										О компании
@@ -304,7 +294,7 @@
 								<img src="img/info3.png" alt="" class="info__pic">
 								<img src="img/i2.svg" alt="" class="info__icon">
 							</a>
-							<a href="#" class="info__item">
+							<a href="#partners" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										Партнеры
@@ -314,7 +304,7 @@
 								<img src="img/info4.png" alt="" class="info__pic">
 								<img src="img/i2.svg" alt="" class="info__icon">
 							</a>
-							<a href="#" class="info__item">
+							<a href="#work" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										Как работаем
@@ -324,7 +314,7 @@
 								<img src="img/info5.png" alt="" class="info__pic">
 								<img src="img/i2.svg" alt="" class="info__icon">
 							</a>
-							<a href="#" class="info__item">
+							<a href="#cases" class="info__item go_to">
 								<div class="info__top q">
 									<p>
 										Кейсы
@@ -366,7 +356,7 @@
 						<div class="item__content q">
 							<p>
 								<span>
-									Ключевой агент <br> China Eastern Airlines  
+									Ключевой агент China Eastern Airlines  
 									(Москва, Пулково, Казань) <br> Агент Aeroflot Russian Airlines (Москва)
 								</span>
 							</p>
@@ -493,7 +483,7 @@
 								Аналитика
 							</h3>
 							<p>
-								Ежедневный анализ рынка грузовых авиаперевозок  для формирования <br> лучшего предложения.
+								Ежедневный анализ рынка грузовых авиаперевозок  для формирования <br> лучшего предложения
 							</p>
 						</div>
 						<div class="about__item swiper-slide">
@@ -502,7 +492,7 @@
 								Склад
 							</h3>
 							<p>
-								Консолидация, хранение, <br> сортировка.
+								Консолидация, хранение, <br> сортировка
 							</p>
 						</div>
 						<div class="about__item swiper-slide">
@@ -529,7 +519,7 @@
 								Доставка
 							</h3>
 							<p>
-								Бронирование грузовой ёмкости, температурный контроль, <br> экспедирование, доставка дверь-дверь.
+								Бронирование грузовой ёмкости, температурный контроль, <br> экспедирование, доставка дверь-дверь
 							</p>
 						</div>
 						<div class="about__item swiper-slide">
@@ -566,7 +556,7 @@
 								Генеральные
 							</h3>
 							<p>
-								Оборудование, запчасти, комплектующие, хоз. товары,одежда, обувь и т.п.
+								Оборудование, запчасти, комплектующие, хоз. товары, одежда, обувь и другие товары категории "генеральный груз"
 							</p>
 							<img src="img/par1.png" alt="">
 						</div>
@@ -576,7 +566,7 @@
 							</h3>
 							<p>
 								Электроника, оптика, ювелирные изделия, драгоценные металлы, культурные ценности <br>
-								Усиленная безопасность
+								<small> Усиленная безопасность</small>
 							</p>
 							<img src="img/par2.png" alt="">
 						</div>
@@ -585,7 +575,8 @@
 								Хрупкие
 							</h3>
 							<p>
-								Стекло, керамика, оптика; электроника, приборы; фарфор, зеркала, витрины, декоративные изделия. Спецупаковка
+								Стекло, керамика, оптика; электроника, приборы; фарфор, зеркала, витрины, декоративные изделия
+								<small>Специальная маркировка, контроль бережного обращения с грузом на всех этапах перевозки</small>
 							</p>
 							<img src="img/par3.png" alt="">
 						</div>
@@ -603,8 +594,8 @@
 								Негабарит
 							</h3>
 							<p>
-								Крупногабаритные и тяжёлые грузы: техника, станки, конструкции, длинномеры, спецоборудование.
-								MSDS, совместимость классов, проектная логистика
+								Крупногабаритные и тяжёлые грузы: техника, станки, конструкции, длинномеры, спецоборудование
+								<small>Согласование габаритов с выступом</small>
 							</p>
 							<img src="img/par5.png" alt="">
 						</div>
@@ -615,6 +606,7 @@
 							<p>
 								Литий‑ионные батареи, химия, аэрозоли.  <br>
 								Оформление декларации опасного груза, спецупаковка, маркирование
+								<small>Оформление деклараци…</small>
 							</p>
 							<img src="img/par6.png" alt="">
 						</div>
@@ -624,6 +616,7 @@
 							</h3>
 							<p>
 								Свежие продукты питания: мясо, рыба, молочка, фрукты/овощи, хлеб; бакалея, консервы, напитки, снеки. Температурные решения, быстрые стыковки
+								<small>Температурные решение...</small>
 							</p>
 							<img src="img/par7.png" alt="">
 						</div>
@@ -641,7 +634,7 @@
 								Химия и косметика
 							</h3>
 							<p>
-								Бытовая химия; уход за кожей и волосами, декоративная косметика, парфюм и т.п.
+								Бытовая химия; уход за кожей и волосами, декоративная косметика, парфюм 
 							</p>
 							<img src="img/par9.png" alt="">
 						</div>
@@ -658,7 +651,7 @@
 				</div>
 				<div class="par__bottom q">
 					<p>
-						Не уверены в категории? Отправьте <br> спецификацию — подберём схему и упаковку
+						Направьте нам данные по грузу - подберём оптимальный маршрут и лучшую стоимость доставки.
 					</p>
 					<div class="q">
 						<a href="#" target="_blank">
@@ -739,7 +732,7 @@
 							Аэрофлот Российские Авиалинии
 						</h3>
 						<p>
-							Грузовой агент ПАО Аэрофлот в Москве.
+							Грузовой агент ПАО Аэрофлот в Москве
 						</p>
 					</div>
 					<div class="area__item">
@@ -749,7 +742,7 @@
 							Оформление опасных грузов
 						</h3>
 						<p>
-							Упакуем, промаркируем, оформим необходимую документацию. Без лишний задержек.
+							Упакуем, промаркируем, оформим необходимую документацию. Без лишний задержек
 						</p>
 					</div>
 					<div class="area__item">
@@ -766,7 +759,7 @@
 						<img src="img/icon4.svg" alt="" class="area__icon">
 						<img src="img/area4.png" alt="" class="area__pic">
 						<h3>
-							Гарантия вылета  и фиксированная стоимость.
+							Гарантия вылета  и фиксированная стоимость
 						</h3>
 						<p>
 							Выкупленная и закреплённая грузовая ёмкость на популярных направлениях.  <br>
@@ -780,13 +773,13 @@
 							 Лучшие логистические решения
 						</h3>
 						<p>
-							Партнёрства с ведущими авиаперевозчиками и офисы в Китае — гибкость по срокам, лучшая стоимости и оперативное решение поставленных задач.
+							Партнёрства с ведущими авиаперевозчиками и офисы в Китае — гибкость по срокам, лучшая стоимости и оперативное решение поставленных задач
 						</p>
 					</div>
 					<div class="area__item">
 						<img src="img/icon6.svg" alt="" class="area__icon">
 						<h3>
-							Направьте нам данные по грузу - подберём оптимальный маршрут и лучшую стоимость доставки.
+							Направьте нам данные по грузу - подберём оптимальный маршрут и лучшую стоимость доставки
 						</h3>
 						<div class="q">
 							<a href="#" target="_blank">
@@ -873,16 +866,19 @@
 				</div>
 				<div class="partners__row">
 					<div class="partners__item">
-						<img src="img/partners5.svg" alt="">
+						<img src="img/partners5.png" alt="">
 					</div>
 					<div class="partners__item">
 						<img src="img/partners1.svg" alt="">
 					</div>
 					<div class="partners__item">
+						<img src="img/partners3.svg" alt="">
+					</div>
+					<div class="partners__item">
 						<img src="img/partners2.svg" alt="">
 					</div>
 					<div class="partners__item">
-						<img src="img/partners3.svg" alt="">
+						<img src="img/partners11.svg" alt="">
 					</div>
 					<div class="partners__item">
 						<img src="img/partners4.svg" alt="">
@@ -1018,11 +1014,11 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<img src="img/case11.jpg" alt="">
-							<!-- <span>
-								(DGR, 480 кг)
-							</span> -->
+							<span>
+								Отправка опасного  груза
+							</span>
 							<h3>
-								Отправка опасного <br> груза
+								Прототип автомобиля для <br> картинга  на выставку в Шанхай
 							</h3>
 							<ul>
 								<li>
@@ -1041,16 +1037,13 @@
 						</div>
 						<div class="swiper-slide">
 							<img src="img/case2.png" alt="">
-							<!-- <span>
-								 (1,8 т, 3 места, oversize)
-							</span> -->
+							<span>
+								 Временный вывоз из РФ
+							</span>
 							<h3>
-								 Временный вывоз <br> из РФ
+								Вывоз оборудования на ремонт из С.Петербурга  в Сеул в режиме переработки
 							</h3>
 							<ul>
-								<li>
-									Вывоз оборудования на ремонт из С.Петербурга в Сеул в режиме переработки
-								</li>
 								<li>
 									Подбор груза с адреса отправителя;
 								</li>
@@ -1073,16 +1066,13 @@
 						</div>
 						<div class="swiper-slide">
 							<img src="img/case4.png" alt="">
-							<!-- <span>
-								(OАЭ, +2…+8°C, 220 кг)
-							</span> -->
+							<span>
+								Ценные грузы в Китай, Гонконг, Японию
+							</span>
 							<h3>
-								Ценные грузы в Китай, <br> Гонконг, Японию
+								 Регулярные отправки драг металлов <br> в Китай, Гонконг, Японию
 							</h3>
 							<ul>
-								<li>
-									 Регулярные отправки драг металлов в Китай, Гонконг, Японию
-								</li>
 								<li>
 									 Согласование поздней сдачи ценных отправлений без размещения на СВХ в аэропорте вылета;
 								</li>
@@ -1099,16 +1089,13 @@
 						</div>
 						<div class="swiper-slide">
 							<img src="img/case5.png" alt="">
-							<!-- <span>
-								(DGR, классы 3 и 8, 720 кг)
-							</span> -->
+							<span>
+								Температурный груз по сложному маршрут
+							</span>
 							<h3>
-								Температурный груз <br> по сложному маршрут
+								Авиа отправка груза с температурным режимом из Мурманска в Китай
 							</h3>
 							<ul>
-								<li>
-									 Авиа отправка груза с температурным режимом из Мурманска в Китай
-								</li>
 								<li>
 									Бронирование и отправка груза по маршруту Мурманск - Шереметьево;
 								</li>
@@ -1330,7 +1317,7 @@
 							Политика конфиденциальности
 						</a>
 						<p>
-							© 2024 Все права защищены
+							© 2025 Все права защищены
 						</p>
 						<a href="https://gasfort.ru/" target="_blank" class="footer__com">
 							<img src="img/com.svg" alt="">

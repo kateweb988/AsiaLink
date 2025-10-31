@@ -47,7 +47,7 @@
       font-size: 80px
       line-height: 120%
    .item__content p
-      font-size: 18px
+      font-size: 17.5px
    .item__content p
       max-width: 48%
    .scroll-nav__next span
@@ -63,9 +63,10 @@
       width: 184px
    .title
       .svg 
-         width: 55px
+         width: 47px
          position: relative
-         top: 2px
+         top: 10px
+         left: 2px
    .van__item h3
       font-size: 26px
       line-height: 120%
@@ -88,7 +89,8 @@
       height: 360px
       width: 48.9%
    .per__item:nth-child(1), .per__item:nth-child(3)
-      width: 23.9%
+      width: 23.5%
+      margin-bottom: 6px
    .per__item span 
       height: 125px
       font-size: 84.71px
@@ -97,8 +99,6 @@
       width: 450px
    .per__item p
       font-size: 27px
-   .partners__item:nth-child(1), .partners__item:nth-child(2)
-      width: 49.2%
    .partners__item
       width: 32.3%
       height: 230px
@@ -145,7 +145,7 @@
    .cases .swiper4 .swiper-slide
       max-width: 48%
       height: 700px
-      padding-top: 232px
+      padding-top: 169px
    .cases .swiper4 .swiper-slide h3
       font-size: 28px
       line-height: 120%
@@ -184,6 +184,16 @@
       top: 51px
    .popup, .popup2
       top: 20rem
+   .item__content
+      align-items: flex-start
+   .form__item:after
+      right: 10px !important
+   .form__item input
+      font-size: 18px
+   .work__top
+      align-items: flex-start
+   .work__top span
+      margin-right: 27px
 @media screen and (max-width: 1350px)
    .container
       max-width: 1200px !important
@@ -214,9 +224,7 @@
    .area__item
       width: 32.1%
    .per__item
-      width: 48.7%
-   .partners__item:nth-child(1), .partners__item:nth-child(2)
-      width: 49%
+      width: 48.75%
    .partners__item
       width: 32%
       padding: 20px 40px
@@ -237,6 +245,8 @@
       height: 58px
       font-size: 14px
 @media screen and (max-width: 1199px)
+   .per__item:nth-child(1), .per__item:nth-child(3)
+      margin-bottom: 0
    .menu-btn 
       width: 42px
       height: 42px
@@ -385,7 +395,7 @@
    .info__bottom
       height: auto
    .info__item
-      width: 31.5%  
+      width: 31.8%  
    .info__top p
       font-size: 18px
    h2 
@@ -424,7 +434,7 @@
    .area__item
       width: 48.7%
    .per__item
-      width: 48.7% !important
+      width: 48.9% !important
       &:last-child
          width: 100% !important
    .partners__item
@@ -562,7 +572,15 @@
    .popup .title .close-popup, .popup2 .title .close-popup
       top: 26px
    .cases .swiper4 .swiper-slide
-      padding-top: 186px
+      padding-top: 81px
+   .cases .swiper4 .swiper-slide span
+      width: 100% 
+      box-sizing: border-box
+      text-align: center
+      line-height: 100%
+   .about__item p
+      br 
+         display: none
 @media ( max-width: 991px )
    input, textarea, select
       -webkit-appearance: none
@@ -1087,7 +1105,7 @@
       top: 109px
       width: auto
    .header__bottom
-      margin-top: 342px
+      margin-top: 332px
    .header__bottom span
       font-size: 14px
    .info__item
@@ -1136,3 +1154,13 @@
          display: none
    .cases .swiper4 .swiper-slide
       height: auto
+   .about .title img
+      bottom: -14px
+   .par .title img
+      margin-right: 0
+   .van .title img
+      top: -15px
+   .per .title img, .call .title img
+      bottom: -15px
+   .partners .title img, .contacts .title img
+      top: -15px
