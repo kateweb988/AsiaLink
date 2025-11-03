@@ -485,12 +485,12 @@ document.addEventListener('DOMContentLoaded', function () {
       320: {
         spaceBetween: 10,
         loop: true,
+        allowTouchMove: true,
         slidesPerView: 1,
       },
       767: {
         spaceBetween: 0,
         slidesPerView: 1,
-        allowTouchMove: true,
         allowTouchMove: true,
       },
       992: {
