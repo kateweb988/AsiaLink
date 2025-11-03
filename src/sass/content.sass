@@ -70,12 +70,16 @@ input.error
       text-align: center
 input::-webkit-input-placeholder 
    color:  rgb(32, 32, 32) !important
+   opacity: 0.8
 input::-moz-placeholder
    color:  rgb(32, 32, 32) !important
+   opacity: 0.8
 input:-ms-input-placeholder 
    color:  rgb(32, 32, 32) !important
+   opacity: 0.8
 input:-moz-placeholder 
    color:  rgb(32, 32, 32) !important
+   opacity: 0.8
 textarea::-webkit-input-placeholder 
    color: rgba(32, 32, 32, 1) !important
 textarea::-moz-placeholder
@@ -521,7 +525,7 @@ ul.info li
          padding-left: 20px
          padding-bottom: 0px
          padding-top: 26px
-         color: rgb(32, 32, 32)
+         color: rgba(32, 32, 32, 0.8)
          font-size: 20px
          font-weight: 600
          line-height: 140%
@@ -2126,3 +2130,5 @@ ul.info li
             fill: rgba(49, 60, 140, 1)
          path 
             stroke: white
+.form__item:after
+   display: none

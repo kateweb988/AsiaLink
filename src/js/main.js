@@ -491,6 +491,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 0,
         slidesPerView: 1,
         allowTouchMove: true,
+        allowTouchMove: true,
       },
       992: {
         spaceBetween: 0,
