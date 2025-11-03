@@ -466,22 +466,22 @@ input.error {
 
 input::-webkit-input-placeholder {
   color: rgb(32, 32, 32) !important;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 input::-moz-placeholder {
   color: rgb(32, 32, 32) !important;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 input:-ms-input-placeholder {
   color: rgb(32, 32, 32) !important;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 input:-moz-placeholder {
   color: rgb(32, 32, 32) !important;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 textarea::-webkit-input-placeholder {
@@ -1065,8 +1065,8 @@ ul.info li {
   padding-left: 20px;
   padding-bottom: 0px;
   padding-top: 26px;
-  color: rgba(32, 32, 32, 0.8);
-  font-size: 20px;
+  color: rgba(32, 32, 32, 0.9);
+  font-size: 19px;
   font-weight: 600;
   line-height: 140%;
   text-transform: capitalize;
@@ -1102,7 +1102,7 @@ ul.info li {
   background: rgb(255, 255, 255);
   box-sizing: border-box;
   color: rgba(1, 1, 1, 0.8) !important;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
   line-height: 100%;
   padding-top: 54px;
@@ -1194,8 +1194,8 @@ ul.info li {
   min-height: 101px;
   max-width: 100%;
   padding-left: 20px;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
+  color: rgba(32, 32, 32, 0.9);
+  font-size: 19px;
   font-weight: 600;
   border-radius: 10px;
   line-height: 140%;
@@ -1963,6 +1963,10 @@ ul.info li {
   right: inherit;
   margin-right: 0;
   transform: rotate(181deg);
+}
+.van .title .svg {
+  position: relative;
+  left: 10px;
 }
 .van__top {
   display: flex;
@@ -3019,9 +3023,9 @@ ul.info li {
     font-size: 16px;
   }
   .nav__call {
-    font-size: 18px;
+    font-size: 17px;
     height: 62px;
-    width: 240px;
+    width: 224px;
     margin-left: 25px;
   }
   .nav__box ul li {
@@ -3091,7 +3095,7 @@ ul.info li {
   .title .svg {
     width: 47px;
     position: relative;
-    top: 10px;
+    top: 8px;
     left: 2px;
   }
   .van__item h3 {
@@ -3271,6 +3275,12 @@ ul.info li {
   }
 }
 @media screen and (max-width: 1350px) {
+  .title .svg {
+    width: 39px;
+    position: relative;
+    top: 13px;
+    left: 2px;
+  }
   .container {
     max-width: 1200px !important;
   }
@@ -3769,6 +3779,13 @@ ul.info li {
   .about__item p br {
     display: none;
   }
+  .van .title .svg {
+    top: 0px;
+    position: relative;
+    left: 6px;
+    height: auto;
+    width: 31px;
+  }
 }
 @media (max-width: 991px) {
   input, textarea, select {
@@ -4021,9 +4038,6 @@ ul.info li {
   .about .pag {
     display: flex;
   }
-  .van .title {
-    padding-top: 10px;
-  }
   .van__top {
     margin-bottom: 0;
     margin-top: 30px;
@@ -4223,6 +4237,13 @@ ul.info li {
     font-size: 23px;
     text-align: left;
   }
+  .van .title .svg {
+    top: 0px;
+    position: relative;
+    left: 4px;
+    height: auto;
+    width: 25px;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {
@@ -4407,7 +4428,7 @@ ul.info li {
   }
   .menu-btn.active {
     right: 20px;
-    top: 11px;
+    top: 17px;
   }
   .menu {
     padding: 15px 20px 0px;
@@ -4550,8 +4571,9 @@ ul.info li {
   }
   .title .svg {
     left: 5px;
-    width: 23px;
-    top: 21px;
+    width: 26px;
+    height: auto;
+    top: 0px;
   }
   .van__item {
     height: auto;
@@ -4598,5 +4620,12 @@ ul.info li {
   }
   .menu-btn {
     top: 17px;
+  }
+  .header {
+    padding-bottom: 0;
+  }
+  .van .title .svg {
+    width: 26px;
+    left: 5px;
   }
 }
