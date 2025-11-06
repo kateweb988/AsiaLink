@@ -1963,7 +1963,7 @@ ul.info li {
   left: 10%;
   z-index: 2;
   position: absolute;
-  top: -22px;
+  top: -24px;
   right: inherit;
   margin-right: 0;
   transform: rotate(181deg);
@@ -2010,7 +2010,7 @@ ul.info li {
   overflow: hidden;
   border-radius: 10px;
   height: 310px;
-  width: 40.7%;
+  width: 40.8%;
 }
 .van__row img:nth-child(2) {
   width: 15.7%;
@@ -2425,7 +2425,7 @@ ul.info li {
 }
 .area__item {
   padding: 30px;
-  width: 32.4%;
+  width: 32.39%;
   position: relative;
   overflow: hidden;
   height: auto;
@@ -2527,7 +2527,7 @@ ul.info li {
   flex-direction: column;
   align-items: flex-start;
   padding: 40px;
-  width: 49.3%;
+  width: 49.25%;
   height: 410px;
   border: 1px solid rgb(234, 234, 234);
   border-radius: 10px;
@@ -2582,7 +2582,7 @@ ul.info li {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32.3%;
+  width: 32.47%;
   overflow: hidden;
   height: 257px;
   border-radius: 10px;
@@ -3319,13 +3319,19 @@ ul.info li {
     font-size: 67px;
   }
   .about__item:nth-child(1), .about__item:nth-child(4) {
-    max-width: 65.5%;
+    max-width: 66%;
   }
   .about__item {
     max-width: 32%;
   }
+  .van__item {
+    width: 49.2%;
+  }
   .area__item {
     width: 32.1%;
+  }
+  .van__row img {
+    width: 40.5%;
   }
   .per__item {
     width: 48.75%;
@@ -4248,6 +4254,30 @@ ul.info li {
     height: auto;
     width: 25px;
   }
+  .about .title img {
+    bottom: -15px;
+  }
+  .par .title img {
+    margin-right: 0;
+  }
+  .van .title img {
+    top: -15px;
+  }
+  .per .title img {
+    bottom: -15px;
+  }
+  .partners .title img {
+    top: -15px;
+  }
+  .call .title img {
+    bottom: -15px;
+  }
+  .contacts .title img {
+    top: -14px;
+  }
+  .header {
+    padding-bottom: 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {
@@ -4556,7 +4586,7 @@ ul.info li {
     height: auto;
   }
   .about .title img {
-    bottom: -14px;
+    bottom: -15px;
   }
   .par .title img {
     margin-right: 0;
