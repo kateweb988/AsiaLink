@@ -4,8 +4,8 @@ $name = htmlspecialchars($_POST["name"]);
 $tel = htmlspecialchars($_POST["tel"]);
 $email = htmlspecialchars($_POST["email"]);
 $weight = htmlspecialchars($_POST["weight"]);
-$local1 = htmlspecialchars($_POST["local"]);
-$local2 = htmlspecialchars($_POST["loca"]);
+$local = htmlspecialchars($_POST["local"]);
+$loca = htmlspecialchars($_POST["loca"]);
 $nums = htmlspecialchars($_POST["nums"]);
 
 
