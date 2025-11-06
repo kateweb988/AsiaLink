@@ -3008,6 +3008,60 @@ ul.info li {
   display: none;
 }
 
+.note {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  background: rgba(42, 45, 50, 0.85);
+  padding: 50px;
+  max-width: 1600px;
+  left: 50%;
+  margin-left: -800px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+}
+.note__name {
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.note__text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+.note__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 228.12px;
+  height: 79px;
+  flex: 1 0 auto;
+  max-width: 228.12px;
+  margin-left: 60px;
+  position: relative;
+  cursor: pointer;
+  top: 20px;
+  transition: 0.5s;
+  background: linear-gradient(0deg, #313C8C, #313C8C), #19BDE5;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+.note__close:hover {
+  color: rgb(43, 58, 140);
+  background: white;
+}
+
 @media screen and (max-width: 1620px) {
   .scroll-nav {
     right: 10px;
@@ -3276,6 +3330,11 @@ ul.info li {
   }
   .work__top span {
     margin-right: 27px;
+  }
+  .note {
+    width: 90%;
+    left: 5%;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 1350px) {
@@ -3798,6 +3857,28 @@ ul.info li {
   }
 }
 @media (max-width: 991px) {
+  .note {
+    padding: 20px;
+    flex-direction: column;
+    bottom: 20px;
+    text-align: center;
+  }
+  .note__name {
+    font-size: 21px;
+    text-align: center;
+    line-height: 100%;
+  }
+  .note__text {
+    font-size: 14px;
+  }
+  .note__close {
+    margin: 20px auto 0px;
+    height: 60px;
+    width: 100%;
+    font-size: 14px;
+    max-width: 100%;
+    top: 0;
+  }
   input, textarea, select {
     -webkit-appearance: none;
     -moz-appearance: none;

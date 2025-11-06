@@ -2140,3 +2140,51 @@ ul.info li
             stroke: white
 .form__item:after
    display: none
+.note 
+   position: fixed
+   bottom: 40px
+   width: 100%
+   background: rgba(42, 45, 50, 0.85)
+   padding: 50px
+   max-width: 1600px
+   left: 50%
+   margin-left: -800px
+   display: flex
+   justify-content: space-between
+   z-index: 20
+   &__name 
+      display: block
+      font-weight: 600
+      font-size: 22px
+      line-height: 150%
+      text-transform: uppercase
+      color: #FFFFFF
+      margin-bottom: 10px
+   &__text 
+      font-weight: 300
+      font-size: 17px
+      line-height: 160%
+      color: #FFFFFF
+   &__close 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 228.12px
+      height: 79px
+      flex: 1 0 auto 
+      max-width: 228.12px
+      margin-left: 60px
+      position: relative
+      cursor: pointer
+      top: 20px
+      transition: 0.5s
+      background: linear-gradient(0deg, #313C8C, #313C8C), #19BDE5
+      border: 1px solid #FFFFFF
+      border-radius: 10px
+      font-weight: 600
+      font-size: 17px
+      line-height: 23px
+      color: #FFFFFF
+      &:hover 
+         color: $blue
+         background: white
