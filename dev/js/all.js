@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
- // popup2
+  // popup2
   const popupBg2 = document.querySelector('.popup__bg2');
   const popup2 = document.querySelector('.popup2');
   const closePopupButton2 = document.querySelectorAll('.popup__bg2 .close-popup');
@@ -389,8 +389,16 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         },
         submitHandler: function (form) {
-          $('#loader').fadeIn();
           const $form = $(form);
+          const checkbox = $form.find('.custom-checkbox');
+
+          // Проверяем, поставлена ли галочка
+          if (!checkbox.is(':checked')) {
+            alert('Пожалуйста, подтвердите согласие с политикой конфиденциальности.');
+            return false; // Останавливаем отправку
+          }
+
+          $('#loader').fadeIn();
 
           $.ajax({
             type: 'POST',
