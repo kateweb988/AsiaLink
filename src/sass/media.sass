@@ -176,10 +176,10 @@
       height: 480px
    .call
       padding-top: 120px
-   .header-policy h1
+   .header-policy h1, .cont h1
       font-size: 58px
    .policy
-      padding: 100px 0
+      padding: 0px 0 100px
    .popup .title .close-popup, .popup2 .title .close-popup
       top: 51px
    .popup, .popup2
@@ -298,7 +298,7 @@
       right: 0
       width: 100%
       height: 100vh  
-      padding: 50px 20px 
+      padding: 32px 20px 
       background: rgba(49, 60, 140, 1)
       transform: translateX(500%)
       transition: transform 0.5s
@@ -360,6 +360,8 @@
       display: flex
       width: max-content
    .menu.active
+      max-height: 91vh
+      overflow-y: auto
       transform: translateX(0)
    .menu-btn.active 
       overflow: visible
@@ -607,6 +609,9 @@
       width: 31px
    .tar .form__flex .form__item:last-child
       width: 49.4%
+   .policy
+      .cont
+         margin-bottom: 60px
 @media ( max-width: 991px )
    .note
       padding: 20px
@@ -963,12 +968,12 @@
    .policy__item
       max-width: 100%
    .policy
-      padding: 50px 0
+      padding: 0px 0 50px
    .header-policy
       padding-bottom: 0 !important
       .header__wrap
          padding: 50px 0
-   .header-policy h1
+   .header-policy h1, .cont h1
       font-size: 23px
       text-align: left
    .van .title .svg 
@@ -1087,7 +1092,7 @@
       font-size: 18px
    .policy__item
       margin-bottom: 30px
-   .header-policy 
+   .header-policy, .cont
       .title img
          right: 57px
    .popup, .popup2
@@ -1278,3 +1283,10 @@
    .van .title .svg
       width: 26px
       left: 5px
+   .policy
+      .cont .header__wrap
+         padding: 50px 0
+   .menu.active 
+      transform: translateX(0)
+      overflow-y: auto
+      max-height: 92vh

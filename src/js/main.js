@@ -76,42 +76,65 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-window.addEventListener("DOMContentLoaded", function () {
-  [].forEach.call(document.querySelectorAll('.tel'), function (input) {
-    var keyCode;
-    function mask(event) {
-      event.keyCode && (keyCode = event.keyCode);
-      var pos = this.selectionStart;
-      if (pos < 3) event.preventDefault();
-      var matrix = "+7 (___) ___ ____",
-        i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, ""),
-        new_value = matrix.replace(/[_\d]/g, function (a) {
-          return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-        });
-      i = new_value.indexOf("_");
-      if (i != -1) {
-        i < 5 && (i = 3);
-        new_value = new_value.slice(0, i)
+document.addEventListener("DOMContentLoaded", () => {
+  const telInputs = document.querySelectorAll('.tel');
+
+  telInputs.forEach(input => {
+
+    // При фокусе сразу показываем префикс
+    input.addEventListener('focus', function () {
+      if (!this.value) {
+        this.value = '+7 (';
       }
-      var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-        function (a) {
-          return "\\d{1," + a.length + "}"
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
-      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-      if (event.type == "blur" && this.value.length < 5) this.value = ""
-    }
+      setCursorToEnd(this);
+    });
 
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false)
+    // При потере фокуса очищаем, если только +7(
+    input.addEventListener('blur', function () {
+      if (this.value === '+7 (' || this.value === '+7') {
+        this.value = '';
+      }
+    });
 
+    // Основная маска
+    input.addEventListener('input', function () {
+      let val = this.value.replace(/\D/g, '');
+
+      // Жёстко фиксируем код страны
+      if (!val.startsWith('7')) {
+        val = '7' + val.substring(1);
+      }
+
+      val = val.substring(0, 11); // максимум 11 цифр
+
+      // Формируем маску
+      let result = '+7 (';
+
+      if (val.length > 1) result += val.substring(1, 4);
+      if (val.length >= 4) result += ') ' + val.substring(4, 7);
+      if (val.length >= 7) result += ' ' + val.substring(7, 9);
+      if (val.length >= 9) result += ' ' + val.substring(9, 11);
+
+      this.value = result;
+      setCursorToEnd(this);
+    });
+
+    // запрет удаления "+7 ("
+    input.addEventListener('keydown', function (e) {
+      if (this.selectionStart < 4 && (e.key === 'Backspace' || e.key === 'Delete')) {
+        e.preventDefault();
+      }
+    });
   });
 
+  // функция чтоб ставить курсор в конец
+  function setCursorToEnd(el) {
+    setTimeout(() => {
+      el.selectionStart = el.selectionEnd = el.value.length;
+    }, 0);
+  }
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   (function ($) {
     var elActive = '';
@@ -579,11 +602,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn = document.querySelector('.menu-btn');
-  let menu = document.querySelector('.menu');
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
+    
+    // Блокировка / разблокировка скролла
+    if (menu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   });
 });
 // svg

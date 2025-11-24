@@ -330,7 +330,7 @@ html * {
   scrollbar-color: blue rgb(43, 58, 140);
 }
 
-.popup__bg {
+.popup__bg, .menu {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
@@ -526,7 +526,7 @@ textarea:-moz-placeholder {
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
-  z-index: 22;
+  z-index: 2200;
 }
 
 .popup, .popup2 {
@@ -2936,13 +2936,23 @@ ul.info li {
 .header-policy .header__wrap {
   padding: 100px 0;
 }
-.header-policy h1 {
+
+.policy .cont {
+  margin-bottom: 150px;
+}
+.policy .cont .header__wrap {
+  padding: 100px 0;
+}
+.policy .cont h1 {
   font-size: 75.87px;
   line-height: 100%;
 }
 
 .policy {
-  padding: 180px 0;
+  padding: 0px 0 180px;
+}
+.policy__main {
+  position: relative;
 }
 .policy__item {
   width: 100%;
@@ -3305,11 +3315,11 @@ ul.info li {
   .call {
     padding-top: 120px;
   }
-  .header-policy h1 {
+  .header-policy h1, .cont h1 {
     font-size: 58px;
   }
   .policy {
-    padding: 100px 0;
+    padding: 0px 0 100px;
   }
   .popup .title .close-popup, .popup2 .title .close-popup {
     top: 51px;
@@ -3471,7 +3481,7 @@ ul.info li {
     right: 0;
     width: 100%;
     height: 100vh;
-    padding: 50px 20px;
+    padding: 32px 20px;
     background: rgb(49, 60, 140);
     transform: translateX(500%);
     transition: transform 0.5s;
@@ -3542,6 +3552,8 @@ ul.info li {
     width: max-content;
   }
   .menu.active {
+    max-height: 91vh;
+    overflow-y: auto;
     transform: translateX(0);
   }
   .menu-btn.active {
@@ -3864,6 +3876,9 @@ ul.info li {
   }
   .tar .form__flex .form__item:last-child {
     width: 49.4%;
+  }
+  .policy .cont {
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 991px) {
@@ -4326,7 +4341,7 @@ ul.info li {
     max-width: 100%;
   }
   .policy {
-    padding: 50px 0;
+    padding: 0px 0 50px;
   }
   .header-policy {
     padding-bottom: 0 !important;
@@ -4334,7 +4349,7 @@ ul.info li {
   .header-policy .header__wrap {
     padding: 50px 0;
   }
-  .header-policy h1 {
+  .header-policy h1, .cont h1 {
     font-size: 23px;
     text-align: left;
   }
@@ -4499,7 +4514,7 @@ ul.info li {
   .policy__item {
     margin-bottom: 30px;
   }
-  .header-policy .title img {
+  .header-policy .title img, .cont .title img {
     right: 57px;
   }
   .popup, .popup2 {
@@ -4755,5 +4770,13 @@ ul.info li {
   .van .title .svg {
     width: 26px;
     left: 5px;
+  }
+  .policy .cont .header__wrap {
+    padding: 50px 0;
+  }
+  .menu.active {
+    transform: translateX(0);
+    overflow-y: auto;
+    max-height: 92vh;
   }
 }
